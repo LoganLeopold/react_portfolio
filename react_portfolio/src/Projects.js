@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Projects.css';
 
 class Projects extends Component {
     render() {
         return (
             <div>
-                Use command rcc to create new react Component
+                <h1>Testing Project Component</h1>
             </div>
         );
     }
