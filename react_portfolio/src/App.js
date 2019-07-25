@@ -2,21 +2,21 @@ import React from 'react';
 import './App.css';
 import {Link, Route} from 'react-router-dom'
 import Projects from "./Projects"
+import { Row, Container, Col } from "reactstrap";
 
 function App() {
   return (
-  <div>
-    <div>This is a placeholder lollerskaat</div>
-    <nav className='top'>
-      <h1> <Link className='homepage' to={'/'}>          Home</Link></h1>
-      <h2> <Link className='projects'  to={'/projects/'}> Projects</Link></h2> 
-      <h2> <Link className='about'    to={'/about'}>     About</Link></h2>
-      <h2> <Link className='resume'   to={'/resume'}>    Resume</Link></h2>
-    </nav>  
+  <Container>
+    <Row>
+      <Col><Link className='homepage underline' to={'/'}>          Logan</Link></Col>
+      <Col><Link className='projects underline' to={'/projects/'}> Projects</Link> </Col>
+      <Col><Link className='about underline'    to={'/about'}>     About</Link></Col>
+      <Col><Link className='resume underline'   to={'/resume'}>    Resume</Link></Col>
+    </Row>
     <main>
       <Route path='/projects' exact render={routerProps => <Projects {...routerProps}/> } />
     </main>
-  </div>
+  </Container>
   );
 }
 
