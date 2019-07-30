@@ -21,10 +21,15 @@
 a {
   padding: 7px;
   margin: 10px;
+  
   color: red;
+  font-size: 5vh;
 }
 
 a:hover {
+  padding: 7px;
+  margin: 10px;
+  
   color: red;
   text-decoration: none;
 

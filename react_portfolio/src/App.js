@@ -7,12 +7,12 @@ import { Row, Container, Col } from "reactstrap";
 function App() {
   return (
   <Container>
-    <Row>
-      <Col><Link className='homepage' to={'/'}>          Logan</Link></Col>
-      <Col><Link className='projects' to={'/projects/'}> Projects</Link> </Col>
-      <Col><Link className='about'    to={'/about'}>     About</Link></Col>
-      <Col><Link className='resume'   to={'/resume'}>    Resume</Link></Col>
-    </Row>
+        <Row>
+          <Col><Link className='homepage' to={'/'}>          Logan</Link></Col>
+          <Col><Link className='projects' to={'/projects/'}> Projects</Link> </Col>
+          <Col><Link className='about'    to={'/about'}>     About</Link></Col>
+          <Col><Link className='resume'   to={'/resume'}>    Resume</Link></Col>
+        </Row>
     <main>
       <Route path='/projects' exact render={routerProps => <Projects {...routerProps}/> } />
     </main>
