@@ -9,8 +9,12 @@ import { Row, Container, Col } from "reactstrap";
 function App() {
   return (
     <Container>
-      <Row>
-        <header>Tester</header>
+      <Row className='header'>
+        <Col>
+          <header>
+            Logan Leopold
+          </header>
+        </Col>
       </Row>
       <Row>
         <Col sm={12} md={2} lg={2} xl={2} className='nav'>

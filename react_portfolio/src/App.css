@@ -31,3 +31,15 @@ a:hover {
   
   font-family: 'Nanum Gothic', sans-serif;
 }
+
+header {
+  font-size: 40px;
+
+  margin: 30px 0;
+}
+
+.header {
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
