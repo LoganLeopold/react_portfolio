@@ -1,7 +1,9 @@
 .App {
   min-width: 100%;
   min-width: 100%;
-  display: flex;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 a {
@@ -23,38 +25,9 @@ a:hover {
   background-size: 10px 2.5px;
 }
 
-nav {
+.nav {
   display: flex;
   flex-direction: column;
-  margin: 2vh 1vw 2vh 1vw;
   
   font-family: 'Nanum Gothic', sans-serif;
 }
-
-main {
-  margin: 2vh 2vw
-}
-
-
-
-
-
-/* .container {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  min-width: 100%;
-  min-height: 100%;
-} */
-
-/* .row {
-  padding: 0;
-  margin: 7vh;
-  display: flex;
-
-  align-content: center;
-  text-align: center;
-
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 5vh;
-} */
