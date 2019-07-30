@@ -1,12 +1,55 @@
-.container {
+.App {
+  min-width: 100%;
+  min-width: 100%;
+  display: flex;
+}
+
+a {
+  padding: 10px 0;
+  margin: 1vh;
+  
+  color: red;
+  font-size: 4vh;
+}
+
+a:hover {
+  padding: 10px 0;
+  margin: 1vh;
+
+  color: red;
+  text-decoration: none;
+
+  background-image: linear-gradient(to right, red, red);
+  background-position: 0 7vh;
+  background-repeat: repeat-x;
+  background-size: 10px 2.5px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 1vw 5vh 1vw;
+  
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+main {
+  margin: 2vh 2vw
+}
+
+
+
+
+
+/* .container {
   margin: 0;
   border: 0;
   padding: 0;
   min-width: 100%;
   min-height: 100%;
-}
+} */
 
-.row {
+/* .row {
   padding: 0;
   margin: 7vh;
   display: flex;
@@ -16,28 +59,4 @@
 
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 5vh;
-}
-
-a {
-  padding: 7px;
-  margin: 10px;
-  
-  color: red;
-  font-size: 5vh;
-}
-
-a:hover {
-  padding: 7px;
-  margin: 10px;
-  
-  color: red;
-  text-decoration: none;
-
-  background-image: linear-gradient(to right, red, red);
-  background-position: 10% 8vh;
-  background-repeat: repeat-x;
-  background-size: auto 3px;
-}
-
-
-
+} */
