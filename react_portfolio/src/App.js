@@ -17,13 +17,13 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col sm={12} md={1} lg={1} xl={1} className='nav'>
+        <Col sm={12} md={2} lg={2} xl={2} className='nav'>
           <Link className='homepage' to={'/'}>Logan</Link>
           <Link className='projects' to={'/projects/'}>Projects</Link>
           <Link className='about'    to={'/about'}>About</Link>
           <Link className='resume'   to={'/resume'}>Resume</Link>
         </Col>
-        <Col sm={12} md={11} lg={11} xl={11} className='main'>
+        <Col sm={12} md={10} lg={10} xl={10} className='main'>
           <Route path='/projects' exact render={routerProps => <Projects {...routerProps}/> } />
           <Route path='/about' exact render={routerProps => <About {...routerProps}/> } />
           <Route path='/resume' exact render={routerProps => <Resume {...routerProps}/> } />
