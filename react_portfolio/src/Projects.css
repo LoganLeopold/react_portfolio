@@ -1,3 +1,13 @@
+.projectsContainer {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     color: black;
 }

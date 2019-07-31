@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Projects.css';
 import Project from './Project'
+import { Row, Container, Col } from "reactstrap";
 
 class Projects extends Component {
 
@@ -31,11 +32,11 @@ class Projects extends Component {
         }
 
         return (
-            <div>
+            <Container className='projectsContainer'>
                 <h1>{this.state.message}</h1>
                 <Project data={p1}></Project>
                 <Project data={p2}></Project>
-            </div>
+            </Container>
         );
     }
 }
