@@ -16,16 +16,16 @@ function App() {
           </header>
         </Col>
       </Row> */}
-      <Row>
-        <Col className='nav'>
+      <Row className='nav'>
+        <Col>
           <Link className='homepage' to={'/'}>Logan</Link>
           <Link className='projects' to={'/projects/'}>Projects</Link>
           <Link className='about'    to={'/about'}>About</Link>
           <Link className='resume'   to={'/resume'}>Resume</Link>
         </Col>
       </Row> 
-      <Row> 
-        <Col sm={12} md={10} lg={10} xl={10} className='main'>
+      <Row className='main'> 
+        <Col>
           <Route path='/projects' exact render={routerProps => <Projects {...routerProps}/> } />
           <Route path='/about' exact render={routerProps => <About {...routerProps}/> } />
           <Route path='/resume' exact render={routerProps => <Resume {...routerProps}/> } />
@@ -34,5 +34,6 @@ function App() {
     </Container>
   );
 }
+
 
 export default App;
