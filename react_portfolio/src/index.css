@@ -22,7 +22,7 @@ code {
 
 #root {
   min-width: 100%;
-  min-width: 100%;
+  min-height: 100%;
   margin: 0;
   border: 0;
   padding: 40px;

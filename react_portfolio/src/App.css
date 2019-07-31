@@ -23,14 +23,16 @@ header {
 }
 
 a {
-  padding: 10px 0;
-  
+  margin: 1vw;
+  padding: 1vh 0;
+
   color: red;
   font-size: 4vh;
 }
 
 a:hover {
-  padding: 10px 0;
+  margin: 1vw;
+  padding: 1vh 0;
 
   color: red;
   text-decoration: none;
@@ -43,7 +45,6 @@ a:hover {
 
 .nav {
   display: flex;
-  flex-direction: column;
   
   font-family: 'Nanum Gothic', sans-serif;
 
@@ -54,4 +55,6 @@ a:hover {
 .main {
   padding: 0;
   margin: 0;
+  min-width: 100%;
+  min-height: 100%;
 }

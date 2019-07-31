@@ -9,25 +9,27 @@ import { Row, Container, Col } from "reactstrap";
 function App() {
   return (
     <Container className='App'>
-      <Row className='header'>
+      {/* <Row className='header'>
         <Col>
           <header>
             Logan Leopold
           </header>
         </Col>
-      </Row>
+      </Row> */}
       <Row>
-        <Col sm={12} md={2} lg={2} xl={2} className='nav'>
+        <Col className='nav'>
           <Link className='homepage' to={'/'}>Logan</Link>
           <Link className='projects' to={'/projects/'}>Projects</Link>
           <Link className='about'    to={'/about'}>About</Link>
           <Link className='resume'   to={'/resume'}>Resume</Link>
         </Col>
+      </Row> 
+      <Row> 
         <Col sm={12} md={10} lg={10} xl={10} className='main'>
           <Route path='/projects' exact render={routerProps => <Projects {...routerProps}/> } />
           <Route path='/about' exact render={routerProps => <About {...routerProps}/> } />
           <Route path='/resume' exact render={routerProps => <Resume {...routerProps}/> } />
-        </Col>
+        </Col>  
       </Row>
     </Container>
   );
