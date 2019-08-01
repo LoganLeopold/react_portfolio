@@ -24,11 +24,13 @@ class Projects extends Component {
     render() {
 
         const p1 = {
+            title: 'Rolling Code',
             url: 'loganleopold.github.io/Trivia',
             img: rollingcode,
         }
 
         const p2 = {
+            title: 'Ticket-Trackr',
             url: 'ticket-trackr.surge.sh',
             img: tickettrackr,
         }

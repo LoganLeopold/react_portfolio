@@ -1,9 +1,14 @@
+.projectCard {
+
+}
+
 .projectImg {
     max-width: 50vh;
     max-height: 40vh;
     margin: 0;
+    border: 10px solid black;
 }
 
 .projectTitle {
-
+    font-size: 3vw;
 }

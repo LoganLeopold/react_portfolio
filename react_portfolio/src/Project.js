@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
+import { Row, Container, Col } from "reactstrap";
 import './Project.css'
 
 class Project extends Component {
 
     render() {
         return (
-            <div className='projectCard'>
-                <h2 class='projectTitle'>{this.props.data.url}</h2>
-                <img class='projectImg' src={this.props.data.img} alt=''></img>
-            </div>
+            <Container className='projectCard'>
+                <Row>
+                  <Col>
+                      <h2 class='projectTitle'>{this.props.data.title}</h2>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                      <img class='projectImg' src={this.props.data.img} alt=''></img>
+                  </Col>
+                </Row>
+            </Container>
         );
     }
 }
