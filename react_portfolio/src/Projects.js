@@ -35,7 +35,6 @@ class Projects extends Component {
 
         return (
             <Container className='projectsContainer'>
-                <h1>{this.state.message}</h1>
                 <Project data={p1}></Project>
                 <Project data={p2}></Project>
             </Container>

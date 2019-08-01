@@ -34,7 +34,7 @@ header {
 
 a {
   margin: 1vw;
-  padding: 1vh 0;
+  padding: 1.5vh 0;
 
   color: red;
   font-size: 4vh;
@@ -42,7 +42,7 @@ a {
 
 a:hover {
   margin: 1vw;
-  padding: 1vh 0;
+  padding: 1.5vh 0;
 
   color: red;
   text-decoration: none;

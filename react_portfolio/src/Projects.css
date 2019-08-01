@@ -11,3 +11,7 @@
 h1 {
     color: black;
 }
+
+.projectCard {
+    max-width: 50%;
+}
