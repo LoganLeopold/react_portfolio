@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Row, Container, Col } from "reactstrap";
 import './Projects.css';
 import Project from './Project'
-import { Row, Container, Col } from "reactstrap";
 import tickettrackr from './images/Screen_Shot_2019-04-07_at_11.58.06_PM.png'
 import rollingcode from './images/Screen_Shot_2019-04-07_at_11.52.06_PM.png'
 
@@ -35,8 +35,14 @@ class Projects extends Component {
 
         return (
             <Container className='projectsContainer'>
-                <Project data={p1}></Project>
-                <Project data={p2}></Project>
+                <Row>
+                  <Col sm={12} md={6} lg={6} xl={6}>
+                      <Project data={p1}></Project>
+                  </Col>
+                  <Col sm={12} md={6} lg={6} xl={6} >
+                      <Project data={p2} ></Project>
+                  </Col>
+                </Row>
             </Container>
         );
     }
