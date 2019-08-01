@@ -38,10 +38,10 @@ class Projects extends Component {
         return (
             <Container className='projectsContainer'>
                 <Row>
-                  <Col sm={12} md={6} lg={6} xl={6}>
+                  <Col className='projectsCard' sm={12} md={6} lg={6} xl={6}>
                       <Project data={p1}></Project>
                   </Col>
-                  <Col sm={12} md={6} lg={6} xl={6} >
+                  <Col className='projectsCard' sm={12} md={6} lg={6} xl={6} >
                       <Project data={p2} ></Project>
                   </Col>
                 </Row>

@@ -9,19 +9,12 @@ import { Row, Container, Col } from "reactstrap";
 function App() {
   return (
     <Container className='App'>
-      {/* <Row className='header'>
-        <Col>
-          <header>
-            Logan Leopold
-          </header>
-        </Col>
-      </Row> */}
       <Row className='nav'>
         <Col>
-          <Link className='homepage' to={'/'}>Logan</Link>
-          <Link className='projects' to={'/projects/'}>Projects</Link>
-          <Link className='about'    to={'/about'}>About</Link>
-          <Link className='resume'   to={'/resume'}>Resume</Link>
+          <Link className='homepage masterLink' to={'/'}>Logan</Link>
+          <Link className='projects masterLink' to={'/projects/'}>Projects</Link>
+          <Link className='about masterLink'    to={'/about'}>About</Link>
+          <Link className='resume masterLink'   to={'/resume'}>Resume</Link>
         </Col>
       </Row> 
       <Row className='main'> 

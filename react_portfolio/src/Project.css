@@ -2,13 +2,42 @@
 
 }
 
+.projectLink {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.projectLink:hover {
+    text-decoration: none;
+    color: black;
+
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.projectCenter{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .projectImg {
-    max-width: 50vh;
-    max-height: 40vh;
+    max-width: 50vmin;
+    max-height: 40vmin;
     margin: 0;
     border: 10px solid black;
 }
 
 .projectTitle {
-    font-size: 3vw;
+    text-align: center;
+    font-size: 4.5vw;
 }
+
+
+
