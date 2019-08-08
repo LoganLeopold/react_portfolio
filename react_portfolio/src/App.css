@@ -1,6 +1,6 @@
 .App {
   min-width: 100%;
-  min-width: 100%;
+  min-height: 100%;
   margin: 0;
   border: 0;
   padding: 0;
@@ -46,7 +46,7 @@ header {
 
 .masterLink {
   margin: 1vw;
-  padding: 1.5vh 0;
+  padding: 2vh 0;
 
   color: red;
   font-size: 3.5vh;
@@ -54,7 +54,7 @@ header {
 
 .masterLink:hover {
   margin: 1vw;
-  padding: 1.5vh 0;
+  padding: 2vh 0;
 
   color: red;
   text-decoration: none;
@@ -69,6 +69,8 @@ header {
   display: flex;
   
   font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Playfair Display', serif;
+  
 
   margin: 0 0 0 0;
   padding: 0;
