@@ -10,8 +10,8 @@ html{
 html::after {
   content: '';
   background: url('./images/golden_coast.jpeg') no-repeat fixed;
-  background-size: 1450px 2000px;
-  background-position: 0px -750px;
+  background-size: 1200px 1700px;
+  background-position: 0px -600px;
   opacity: 1;
   top: 0;
   left: 0;
