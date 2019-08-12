@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Row, Container, Col } from "reactstrap";
 import './Projects.css';
 import Project from './Project'
-import tickettrackr from './images/Screen_Shot_2019-04-07_at_11.58.06_PM.png'
-import rollingcode from './images/Screen_Shot_2019-04-07_at_11.52.06_PM.png'
+import tickettrackr from './images/Ticket_Trackr.png'
+import rollingcode from './images/Rolling_Code.png'
 
 class Projects extends Component {
 
@@ -25,13 +25,13 @@ class Projects extends Component {
 
         const p1 = {
             title: 'Rolling Code',
-            url: 'loganleopold.github.io/Trivia',
+            url: 'https://loganleopold.github.io/Trivia',
             img: rollingcode,
         }
 
         const p2 = {
             title: 'Ticket-Trackr',
-            url: 'ticket-trackr.surge.sh',
+            url: 'https://ticket-trackr.surge.sh',
             img: tickettrackr,
         }
 
