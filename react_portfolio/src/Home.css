@@ -1,8 +1,15 @@
 .homeText {
-    width: 50%;
-    
     font-size: 6.5vmin;
-    color: #EC6A4A;
+    color: #FFEEE0;
     font-family: 'DM Serif Text', serif;
-    text-shadow: 0px 4px 6px rgb(0, 0, 0, .08)
+    text-shadow: 0px 4px 6px rgb(0, 0, 0, .08);
+
+    width: 50%;
+}
+
+.logan {
+    position: top;
+    width: 500px;
+    height: 600px;
+    /* z-index: -1; */
 }

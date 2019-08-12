@@ -4,6 +4,8 @@
   margin: 0;
   border: 0;
   padding: 0;
+
+  background: transparent;
 }
 
 div {
@@ -16,6 +18,8 @@ div {
   min-width: 100%;
   margin: 0;
   padding: 0;
+
+  background: transparent;
 }
 
 .col {
@@ -23,6 +27,7 @@ div {
   min-width: 100%;
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 
 .row {
@@ -30,8 +35,9 @@ div {
   min-width: 100%;
   margin: 0;
   padding: 0;
+  background: transparent;
 
-justify-content: center;
+  justify-content: center;
 }
 
 header {
@@ -50,7 +56,7 @@ header {
   margin: 1vw;
   padding: 2vh 0;
 
-  color: #96a547;
+  color: #FFEEE0;
   font-size: 3vh;
   font-weight: bold;
 
@@ -63,12 +69,12 @@ header {
 
   font-size: 2.8vh;
   font-weight: bold;
-  color: white;
+  color: #FFEEE0;
   text-decoration: none;
 
   text-shadow: 0px 2px 2px rgb(0, 0, 0, .08);
 
-  background-image: linear-gradient(to right, white, white);
+  background-image: linear-gradient(to right, #FFEEE0, #FFEEE0);
   background-position: 0 7vh;
   background-repeat: repeat-x;
   background-size: 10px 1.5px;
@@ -83,6 +89,8 @@ header {
   
   margin: 0;
   padding: 0;
+
+  background: transparent;
 }
 
 .main {
@@ -90,6 +98,11 @@ header {
   margin: 8vh 0 0 0;
   min-width: 100%;
   min-height: 100%;
+
+  content: '';
+  background: url('./images/me.png') no-repeat;
+  background-size: 350px 450px;
+  background-position: 50vw 0px;
 }
 
 .instaHandle {
@@ -97,18 +110,17 @@ header {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  z-index: -1;
 
-  color: white;
+  color: #FFEEE0;
   font-family: 'Playfair Display', serif;
-  /* text-shadow: .85px .85px 0px rgb(0, 0, 0, 1); */
+  text-shadow: 0px 1.5px 2px rgb(0, 0, 0, .08);
   font-size: 4vmin;
   font-weight: bold;
   text-decoration: none
 }
 
 .instaLink {
-  color: white;
+  color: #FFEEE0;
   text-decoration: none;
   font-weight: bold;
 }
@@ -120,8 +132,8 @@ header {
 }
 
 .photo {
-  justify-content: right;
-  align-content: right;
+  justify-content: center;
+  align-content: center;
   text-align: right;
   align-items: flex-end;
 

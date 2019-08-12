@@ -2,15 +2,17 @@ html{
   padding: 0;
   min-width: 100%;
   min-height: 100%;
-  display: block;
-  position: absolute;
+  /* display: block;
+  position: absolute; */
+
+  background: #51cdc8
 }
 
 /* achieves background img transparency */
-html::after {
+/* html::after {
   content: '';
-  background: url('./images/lighthouse_background.jpeg') no-repeat fixed;
-  background-size: 1450px 2000px;
+  background: url('./images/me.png') no-repeat fixed;
+  background-size: 700px 850px;
   background-position: 0px -750px;
   opacity: 1;
   top: 0;
@@ -19,7 +21,7 @@ html::after {
   bottom: 0;
   z-index: -5;
   position: absolute;
-}
+} */
 
 body {
   height: 100%;
@@ -29,6 +31,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #51cdc8
 }
 
 code {
