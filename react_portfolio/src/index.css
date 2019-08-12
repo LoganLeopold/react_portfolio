@@ -2,26 +2,26 @@ html{
   padding: 0;
   min-width: 100%;
   min-height: 100%;
-  /* display: block;
-  position: absolute; */
 
-  background: #51cdc8
+  display: block;
+  position: absolute;
+
+
 }
 
-/* achieves background img transparency */
-/* html::after {
+html:after {
   content: '';
-  background: url('./images/me.png') no-repeat fixed;
-  background-size: 700px 850px;
-  background-position: 0px -750px;
-  opacity: 1;
+  background: url('./images/me.png') no-repeat;
+  background-size: 650px 750px;
+  background-position: 350px 0;
+  opacity: .9;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -5;
   position: absolute;
-} */
+}
 
 body {
   height: 100%;

@@ -99,13 +99,10 @@ header {
   min-width: 100%;
   min-height: 100%;
 
-  content: '';
-  background: url('./images/me.png') no-repeat;
-  background-size: 350px 450px;
-  background-position: 50vw 0px;
+  background: transparent;
 }
 
-.instaHandle {
+/* .instaHandle {
   height: 4vh;
   position: fixed;
   bottom: 50px;
@@ -138,4 +135,4 @@ header {
   align-items: flex-end;
 
   margin: 10vmin 0;
-}
+} */
