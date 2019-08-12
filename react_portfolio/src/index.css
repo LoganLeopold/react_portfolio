@@ -9,7 +9,7 @@ html{
 /* achieves background img transparency */
 html::after {
   content: '';
-  background: url('./images/golden_coast.jpeg') no-repeat fixed;
+  background: url('./images/lighthouse_background.jpeg') no-repeat fixed;
   background-size: 1450px 2000px;
   background-position: 0px -750px;
   opacity: 1;
