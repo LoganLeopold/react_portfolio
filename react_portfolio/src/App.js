@@ -25,11 +25,6 @@ function App() {
           <Route path='/about' exact render={routerProps => <About {...routerProps}/> } />
           <Route path='/resume' exact render={routerProps => <Resume {...routerProps}/> } />
         </Col>  
-        {/* <Col className='photo'>
-          <h3 className='instaHandle'>
-            Photography by <a href='http://www.instagram.com/loganleopold' className='instaLink'>Logan Leopold</a>
-          </h3>
-        </Col> */}
       </Row>
     </Container>
   );

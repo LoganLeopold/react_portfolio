@@ -12,9 +12,10 @@ html{
 html:after {
   content: '';
   background: url('./images/me.png') no-repeat;
-  background-size: 650px 750px;
-  background-position: 350px 0;
-  opacity: .9;
+  background-size: 550px 650px;
+  /* background-position: 450px 20px; */
+  background-position: 40vw 3vh;
+  opacity: .95;
   top: 0;
   left: 0;
   right: 0;
