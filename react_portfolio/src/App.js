@@ -11,22 +11,18 @@ function App() {
   return (
     <Container className='App'>
       <Row className='nav'>
-        <Col>
+        <Col className='nav'>
           <Link className='homepage masterLink' to={'/'}>Logan</Link>
           <Link className='projects masterLink' to={'/projects/'}>Projects</Link>
           <Link className='about masterLink'    to={'/about'}>About</Link>
           <Link className='resume masterLink'   to={'/resume'}>Resume</Link>        
         </Col>
-      </Row> 
-      <Row className='main'> 
-        <Col>
+        <Col className='main'>
           <Route path='/' exact render={routerProps => <Home {...routerProps}/> } />
           <Route path='/projects' exact render={routerProps => <Projects {...routerProps}/> } />
           <Route path='/about' exact render={routerProps => <About {...routerProps}/> } />
           <Route path='/resume' exact render={routerProps => <Resume {...routerProps}/> } />
         </Col>  
-      </Row>
-      <Row className='photo'>
         <Col className='photo'>
           <h3 className='instaHandle'>
             Photography by <a href='http://www.instagram.com/loganleopold' className='instaLink'>Logan Leopold</a>
