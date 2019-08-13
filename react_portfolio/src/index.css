@@ -10,8 +10,10 @@ html{
 html::after {
   content: '';
   background: url('./images/lighthouse_background.jpeg') no-repeat fixed;
-  background-size: 1450px 2000px;
-  background-position: 0px -750px;
+  /* background-size: 1450px 2000px; */
+  background-size: 100%;
+  /* background-position: 0px -750px; */
+  background-position: 50%;
   opacity: 1;
   top: 0;
   left: 0;
