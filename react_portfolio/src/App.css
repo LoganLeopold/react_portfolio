@@ -50,6 +50,7 @@ header {
   margin: 1vw;
   padding: 2vh 0;
 
+  /* color: #E9C698; */
   color: white;
   font-size: 3vh;
   font-weight: bold;
@@ -93,30 +94,30 @@ header {
 }
 
 .instaHandle {
-  /* height: 4vh;
-  position: fixed;
+  height: 4vh;
   bottom: 50px;
   right: 50px;
-  z-index: -1; */
+  /* position: fixed; */
+  /* z-index: -1; */
 
-  color: white;
+  color: black;
   font-family: 'Playfair Display', serif;
-  /* text-shadow: .85px .85px 0px rgb(0, 0, 0, 1); */
+  text-shadow: .85px .85px 0px rgb(0, 0, 0, .1);
   font-size: 4vmin;
   font-weight: bold;
   text-decoration: none
 }
 
 .instaLink {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
 .instaLink:hover {
-  color: black;
+  color: white;
   text-decoration: none;
-  font-size: 3.75vmin;
+  font-size: 3.5vmin;
 }
 
 .photo {
@@ -125,5 +126,5 @@ header {
   text-align: right;
   align-items: flex-end;
 
-  margin: 10vmin 0;
+  margin: 20vmin 0 0 0;
 }

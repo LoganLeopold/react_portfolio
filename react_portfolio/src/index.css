@@ -9,9 +9,9 @@ html{
 /* achieves background img transparency */
 html::after {
   content: '';
-  background: url('./images/golden_coast.jpeg') no-repeat fixed;
-  background-size: 1500px 1900px;
-  background-position: 0px -700px;
+  background: url('./images/coffee3.jpg') no-repeat fixed;
+  background-size: 100%;
+  background-position: 50%;
   opacity: 1;
   top: 0;
   left: 0;
