@@ -75,7 +75,7 @@ class App extends Component {
               to={'/about'}
               onMouseEnter={this.mouseHovers}
               onMouseLeave={this.mouseExits}>
-                {this.state.About ? <img src={coffee} alt='' className='linkImg'></img> : 'Projects'}
+                {this.state.About ? <img src={coffee} alt='' className='linkImg'></img> : 'About'}
             </Link>
             <Link 
               className='resume masterLink'   
