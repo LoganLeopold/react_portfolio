@@ -18,8 +18,9 @@ class App extends Component {
       Resume: '',
     };
     this.componentDidMount = this.componentDidMount.bind(this);
-    this.changeLinkBackground = this.changeLinkBackground.bind(this);
-    this.changeLinkText = this.changeLinkText.bind(this)
+    this.produceImg = this.produceImg.bind(this)
+    // this.changeLinkBackground = this.changeLinkBackground.bind(this);
+    // this.changeLinkText = this.changeLinkText.bind(this)
   }
 
   componentDidMount () {
@@ -32,35 +33,61 @@ class App extends Component {
   }
 
   changeLinkBackground (event) { 
-
-    let projectsImg = <img src='./images/coffee.jpg' alt='' className='imgLink'></img>
-  
-    let state = event.target.name
-    
+    let linkName = event.target.name
     this.setState({
-      [state]: projectsImg
+      [linkName]: linkName + 'Entered'
     })
   }
 
   changeLinkText (event) {
-    let state = event.target.name
-
+    let linkName = event.target.name
     this.setState({
-      [state]: state
+      [linkName]: linkName
     })
   }
 
+  produceImg () {
+    return (<img src='./images/coffee.jpg' alt='' className='linkImg'></img>)
+  }
+
   render() {
+
     return (
       <Container className='App'>
         <Row className='nav'>
           <Col className='nav'>
-            <Link className='homepage masterLink' name='Home' to={'/'}>{this.state.Home}</Link>
-            <Link className='projects masterLink' name='Projects' onMouseEnter={this.changeLinkBackground.bind(this)} 
-            // onMouseLeave={this.changeLinkText.bind(this)} 
-            to={'/projects/'}>{this.state.Projects}</Link>
-            <Link className='about masterLink'    name='About' to={'/about'}>{this.state.About}</Link>
-            <Link className='resume masterLink'   name='Resume' to={'/resume'}>{this.state.Resume}</Link>        
+            <Link 
+              className='homepage masterLink' 
+              name='Home' 
+              to={'/'} 
+              onMouseEnter={this.changeLinkBackground.bind(this)}
+              onMouseLeave={this.changeLinkText.bind(this)}>
+            {this.state.Home}              
+            </Link>
+            <Link 
+              className='projects masterLink' 
+              name='Projects' 
+              to={'/projects/'}
+              onMouseEnter={this.changeLinkBackground.bind(this)}
+              onMouseLeave={this.changeLinkText.bind(this)}>
+              {this.state.Projects}
+            </Link>
+            <Link 
+              className='about masterLink' 
+              name='About' 
+              to={'/about'}
+              onMouseEnter={this.changeLinkBackground.bind(this)}
+              onMouseLeave={this.changeLinkText.bind(this)}>
+              {this.state.About}
+            </Link>
+            <Link 
+              className='resume masterLink'   
+              name='Resume' 
+              to={'/resume'}
+              onMouseEnter={this.changeLinkBackground.bind(this)}
+              onMouseLeave={this.changeLinkText.bind(this)}>
+              {this.state.Resume}
+            </Link>        
           </Col>
           <Col className='main'>
             <Route path='/' exact render={routerProps => <Home {...routerProps}/> } />

@@ -34,23 +34,10 @@ div {
 justify-content: center;
 }
 
-header {
-  font-size: 60px;
-
-  margin: 30px 0 45px 0;
-}
-
-.header {
-  align-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .masterLink {
   margin: 1vw;
   padding: 2vh 0;
 
-  /* color: #E9C698; */
   color: white;
   font-size: 3vh;
   font-weight: bold;
@@ -73,6 +60,11 @@ header {
   background-position: 0 7vh;
   background-repeat: repeat-x;
   background-size: 10px 1.5px;
+}
+
+.linkImg {
+  height: 75px;
+  width: 50px;
 }
 
 .nav {
