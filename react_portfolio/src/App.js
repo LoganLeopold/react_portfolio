@@ -35,19 +35,15 @@ class App extends Component {
   changeLinkBackground (event) { 
     let linkName = event.target.name
     this.setState({
-      [linkName]: linkName + 'Entered'
+      [linkName]: true
     })
   }
 
   changeLinkText (event) {
     let linkName = event.target.name
     this.setState({
-      [linkName]: linkName
+      [linkName]: false
     })
-  }
-
-  produceImg () {
-    return (<img src='./images/coffee.jpg' alt='' className='linkImg'></img>)
   }
 
   render() {
@@ -62,7 +58,7 @@ class App extends Component {
               to={'/'} 
               onMouseEnter={this.changeLinkBackground.bind(this)}
               onMouseLeave={this.changeLinkText.bind(this)}>
-            {this.state.Home}              
+            {}              
             </Link>
             <Link 
               className='projects masterLink' 
