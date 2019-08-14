@@ -32,13 +32,15 @@ class App extends Component {
   }
 
   mouseHovers (event) { 
+    event.preventDefault()
     console.log('ENTER')
     this.setState({
-      [event.target.name]: ['navHover','']
+      [event.target.name]: ['navHover',event.target.name]
     })
   }
 
   mouseExits (event) {
+    event.preventDefault()
     console.log('EXIT')
     this.setState({
       [event.target.name]: ['masterLink',event.target.name]
