@@ -17,7 +17,8 @@ html::after {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -5;
+  
+  z-index: -4;
   position: absolute;
 }
 
