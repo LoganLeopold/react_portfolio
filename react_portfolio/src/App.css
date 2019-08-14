@@ -91,6 +91,8 @@ header {
   margin: 8vh 0 0 0;
   min-width: 100%;
   min-height: 100%;
+
+  margin: 10vh 0 10vh 0;
 }
 
 .instaHandle {
@@ -126,5 +128,5 @@ header {
   text-align: right;
   align-items: flex-end;
 
-  margin: 20vmin 0 0 0;
+  margin: 10vmin 0 0 0; 
 }
