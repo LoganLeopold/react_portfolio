@@ -6,16 +6,16 @@ import Projects from './Projects'
 import About from './About'
 import Resume from './Resume'
 import { Row, Container, Col } from "reactstrap";
-import coffee from './images/coffee.jpg'
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      Home: '',
-      Projects: '',
-      About: '',
-      Resume: '',
+      Home: ['masterLink', 'Home'],
+      Projects: ['masterLink', 'Projects'],
+      About: ['masterLink', 'About'],
+      Resume: ['masterLink', 'Resume'],
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -24,26 +24,24 @@ class App extends Component {
 
   componentDidMount () {
     this.setState({
-      Home: false,
-      Projects: false,
-      About: false,
-      Resume: false,
+      Home: ['masterLink', 'Home'],
+      Projects: ['masterLink', 'Projects'],
+      About: ['masterLink', 'About'],
+      Resume: ['masterLink', 'Resume'],
     });
   }
 
   mouseHovers (event) { 
-    // console.log(event.target.name)
-    let linkName = event.target.name
+    console.log('ENTER')
     this.setState({
-      [linkName]: true
+      [event.target.name]: ['navHover','']
     })
   }
 
   mouseExits (event) {
-    console.log(event.target)
-    let linkName = event.target.name
+    console.log('EXIT')
     this.setState({
-      [linkName]: false
+      [event.target.name]: ['masterLink',event.target.name]
     })
   }
 
@@ -54,36 +52,36 @@ class App extends Component {
         <Row>
           <Col className='nav'>
             <Link 
-              className='homepage masterLink' 
+              className={this.state.Home[0]} 
               name='Home' 
               to={'/'} 
               onMouseEnter={this.mouseHovers}
               onMouseLeave={this.mouseExits}>
-                {this.state.Home ? <img src={coffee} alt='' className='linkImg' ></img> : 'Home'}              
+                {this.state.Home[1]}
             </Link>
             <Link 
-              className='projects masterLink' 
+              className={this.state.Projects[0]} 
               name='Projects' 
               to={'/projects/'}
               onMouseEnter={this.mouseHovers}
               onMouseLeave={this.mouseExits}>
-                {this.state.Projects ? <img src={coffee} alt='' className='linkImg'></img> : 'Projects'}
+                {this.state.Projects[1]}
             </Link>
             <Link 
-              className='about masterLink' 
+              className={this.state.About[0]}
               name='About' 
               to={'/about'}
               onMouseEnter={this.mouseHovers}
               onMouseLeave={this.mouseExits}>
-                {this.state.About ? <img src={coffee} alt='' className='linkImg'></img> : 'About'}
+                {this.state.About[1]}
             </Link>
             <Link 
-              className='resume masterLink'   
+              className={this.state.Resume[0]}   
               name='Resume' 
               to={'/resume'}
               onMouseEnter={this.mouseHovers}
               onMouseLeave={this.mouseExits}>
-                {this.state.Resume ? <img src={coffee} alt='' className='linkImg'></img> : 'Resume'}
+                {this.state.Resume[1]}
             </Link>        
           </Col>
           <Col className='main'>
