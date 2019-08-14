@@ -6,7 +6,7 @@ import Projects from './Projects'
 import About from './About'
 import Resume from './Resume'
 import { Row, Container, Col } from "reactstrap";
-import './images/coffee.jpg'
+import coffee from './images/coffee.jpg'
 
 class App extends Component {
   constructor() {
@@ -18,28 +18,29 @@ class App extends Component {
       Resume: '',
     };
     this.componentDidMount = this.componentDidMount.bind(this);
-    this.produceImg = this.produceImg.bind(this)
-    // this.changeLinkBackground = this.changeLinkBackground.bind(this);
-    // this.changeLinkText = this.changeLinkText.bind(this)
+    this.mouseHovers = this.mouseHovers.bind(this);
+    this.mouseExits = this.mouseExits.bind(this)
   }
 
   componentDidMount () {
     this.setState({
-      Home: 'Logan',
-      Projects: 'Projects',
-      About: 'About',
-      Resume: 'Resume',
-    })
+      Home: false,
+      Projects: false,
+      About: false,
+      Resume: false,
+    });
   }
 
-  changeLinkBackground (event) { 
+  mouseHovers (event) { 
+    // console.log(event.target.name)
     let linkName = event.target.name
     this.setState({
       [linkName]: true
     })
   }
 
-  changeLinkText (event) {
+  mouseExits (event) {
+    console.log(event.target)
     let linkName = event.target.name
     this.setState({
       [linkName]: false
@@ -50,39 +51,39 @@ class App extends Component {
 
     return (
       <Container className='App'>
-        <Row className='nav'>
+        <Row>
           <Col className='nav'>
             <Link 
               className='homepage masterLink' 
               name='Home' 
               to={'/'} 
-              onMouseEnter={this.changeLinkBackground.bind(this)}
-              onMouseLeave={this.changeLinkText.bind(this)}>
-            {}              
+              onMouseEnter={this.mouseHovers}
+              onMouseLeave={this.mouseExits}>
+                {this.state.Home ? <img src={coffee} alt='' className='linkImg' ></img> : 'Home'}              
             </Link>
             <Link 
               className='projects masterLink' 
               name='Projects' 
               to={'/projects/'}
-              onMouseEnter={this.changeLinkBackground.bind(this)}
-              onMouseLeave={this.changeLinkText.bind(this)}>
-              {this.state.Projects}
+              onMouseEnter={this.mouseHovers}
+              onMouseLeave={this.mouseExits}>
+                {this.state.Projects ? <img src={coffee} alt='' className='linkImg'></img> : 'Projects'}
             </Link>
             <Link 
               className='about masterLink' 
               name='About' 
               to={'/about'}
-              onMouseEnter={this.changeLinkBackground.bind(this)}
-              onMouseLeave={this.changeLinkText.bind(this)}>
-              {this.state.About}
+              onMouseEnter={this.mouseHovers}
+              onMouseLeave={this.mouseExits}>
+                {this.state.About ? <img src={coffee} alt='' className='linkImg'></img> : 'Projects'}
             </Link>
             <Link 
               className='resume masterLink'   
               name='Resume' 
               to={'/resume'}
-              onMouseEnter={this.changeLinkBackground.bind(this)}
-              onMouseLeave={this.changeLinkText.bind(this)}>
-              {this.state.Resume}
+              onMouseEnter={this.mouseHovers}
+              onMouseLeave={this.mouseExits}>
+                {this.state.Resume ? <img src={coffee} alt='' className='linkImg'></img> : 'Resume'}
             </Link>        
           </Col>
           <Col className='main'>
