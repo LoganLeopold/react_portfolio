@@ -60,17 +60,19 @@ div {
 }
 
 .navHover {
-  background: url('./images/coffee3.jpg') no-repeat fixed;
-  background-position: center;
+  background: url('./images/lighthouse.jpeg') no-repeat fixed;
+  background-position: center center;
   background-size: 100%;
   margin: 2.5vw;
   padding: 2vh 0;
-  height: 30px;
-  width: 30px;
+  height: 200px;
+  width: 200px;
 
   color: rgba(0, 0, 0, 0);
   font-size: 3vh;
   text-decoration: none;
+
+
 
   /* justify-content: center;
   align-content: center;
@@ -78,13 +80,13 @@ div {
 }
 
 .navHover:hover {
-  background: url('./images/coffee3.jpg') no-repeat fixed;
-  background-position: center;
+  background: url('./images/lighthouse.jpeg') no-repeat fixed;
+  background-position: center center;
   background-size: 100%;
   margin: 2.5vw;
   padding: 2vh 0;
-  height: 30px;
-  width: 30px;
+  height: 200px;
+  width: 200px;
 
   color: rgba(0, 0, 0, 0);
   font-size: 3vh;
