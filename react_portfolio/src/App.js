@@ -53,38 +53,38 @@ class App extends Component {
       <Container className='App'>
         <Row>
           <Col className='nav'>
-            <Link 
-              className={this.state.Home[0]} 
-              name='Home' 
-              to={'/'} 
-              onMouseEnter={this.mouseHovers}
-              onMouseLeave={this.mouseExits}>
-                {this.state.Home[1]}
-            </Link>
-            <Link 
-              className={this.state.Projects[0]} 
-              name='Projects' 
-              to={'/projects/'}
-              onMouseEnter={this.mouseHovers}
-              onMouseLeave={this.mouseExits}>
-                {this.state.Projects[1]}
-            </Link>
-            <Link 
-              className={this.state.About[0]}
-              name='About' 
-              to={'/about'}
-              onMouseEnter={this.mouseHovers}
-              onMouseLeave={this.mouseExits}>
-                {this.state.About[1]}
-            </Link>
-            <Link 
-              className={this.state.Resume[0]}   
-              name='Resume' 
-              to={'/resume'}
-              onMouseEnter={this.mouseHovers}
-              onMouseLeave={this.mouseExits}>
-                {this.state.Resume[1]}
-            </Link>        
+            <div className='linkWrapper'><Link
+            className={this.state.Home[0]}
+            name='Home'
+            to={'/'}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}>
+            {this.state.Home[1]}
+            </Link></div>
+            <div className='linkWrapper'><Link
+            className={this.state.Projects[0]}
+            name='Projects'
+            to={'/projects/'}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}>
+            {this.state.Projects[1]}
+            </Link></div>
+            <div className='linkWrapper'><Link
+            className={this.state.About[0]}
+            name='About'
+            to={'/about'}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}>
+            {this.state.About[1]}
+            </Link></div>
+            <div className='linkWrapper'><Link
+            className={this.state.Resume[0]}
+            name='Resume'
+            to={'/resume'}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}>
+            {this.state.Resume[1]}
+            </Link></div>        
           </Col>
           <Col className='main'>
             <Route path='/' exact render={routerProps => <Home {...routerProps}/> } />
