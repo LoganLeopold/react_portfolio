@@ -54,7 +54,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Home[0]}
-                style={this.state.Home[2]}
+                style={this.state.Home[3]}
                 name="Home"
                 to={"/"}
                 onMouseEnter={this.mouseHovers}
@@ -66,7 +66,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Projects[0]}
-                style={this.state.Projects[2]}
+                style={this.state.Projects[3]}
                 name="Projects"
                 to={"/projects/"}
                 onMouseEnter={this.mouseHovers}
@@ -78,7 +78,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.About[0]}
-                style={this.state.About[2]}
+                style={this.state.About[3]}
                 name="About"
                 to={"/about"}
                 onMouseEnter={this.mouseHovers}
@@ -90,7 +90,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Resume[0]}
-                style={this.state.Resume[2]}
+                style={this.state.Resume[3]}
                 name="Resume"
                 to={"/resume"}
                 onMouseEnter={this.mouseHovers}
