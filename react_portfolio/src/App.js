@@ -11,10 +11,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      Home: ["masterLink", "Home"],
-      Projects: ["masterLink", "Projects"],
-      About: ["masterLink", "About"],
-      Resume: ["masterLink", "Resume"]
+      Home: ["masterLink", "Home", './images/logan.png'],
+      Projects: ["masterLink", "Projects", './images/logan.png'],
+      About: ["masterLink", "About", './images/logan.png'],
+      Resume: ["masterLink", "Resume", './images/logan.png']
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -23,16 +23,16 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      Home: ["masterLink", "Home"],
-      Projects: ["masterLink", "Projects"],
-      About: ["masterLink", "About"],
-      Resume: ["masterLink", "Resume"]
+      Home: ["masterLink", "Home", './images/logan.png'],
+      Projects: ["masterLink", "Projects", './images/logan.png'],
+      About: ["masterLink", "About", './images/logan.png'],
+      Resume: ["masterLink", "Resume", './images/logan.png'],
     });
   }
 
   mouseHovers(event) {
     event.preventDefault();
-    console.log("ENTER");
+
     this.setState({
       [event.target.name]: ["navHover", event.target.name]
     });
@@ -40,7 +40,7 @@ class App extends Component {
 
   mouseExits(event) {
     event.preventDefault();
-    console.log("EXIT");
+
     this.setState({
       [event.target.name]: ["masterLink", event.target.name]
     });
@@ -54,6 +54,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Home[0]}
+                style={this.state.Home[2]}
                 name="Home"
                 to={"/"}
                 onMouseEnter={this.mouseHovers}
@@ -65,6 +66,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Projects[0]}
+                style={this.state.Projects[2]}
                 name="Projects"
                 to={"/projects/"}
                 onMouseEnter={this.mouseHovers}
@@ -76,6 +78,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.About[0]}
+                style={this.state.About[2]}
                 name="About"
                 to={"/about"}
                 onMouseEnter={this.mouseHovers}
@@ -87,6 +90,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Resume[0]}
+                style={this.state.Resume[2]}
                 name="Resume"
                 to={"/resume"}
                 onMouseEnter={this.mouseHovers}
