@@ -11,10 +11,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      Home: ["masterLink", "Home"],
-      Projects: ["masterLink", "Projects"],
-      About: ["masterLink", "About"],
-      Resume: ["masterLink", "Resume"]
+      Home: ["masterLink", "Home", './images/logan.png', {'':''}],
+      Projects: ["masterLink", "Projects", './images/logan.png', {'':''}],
+      About: ["masterLink", "About", './images/logan.png', {'':''}],
+      Resume: ["masterLink", "Resume", './images/logan.png', {'':''}]
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -23,27 +23,78 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      Home: ["masterLink", "Home"],
-      Projects: ["masterLink", "Projects"],
-      About: ["masterLink", "About"],
-      Resume: ["masterLink", "Resume"]
+      Home: ["masterLink", "Home", './images/logan.png', {'':''}],
+      Projects: ["masterLink", "Projects", './images/logan.png', {'':''}],
+      About: ["masterLink", "About", './images/logan.png', {'':''}],
+      Resume: ["masterLink", "Resume", './images/logan.png', {'':''}]
     });
   }
 
   mouseHovers(event) {
     event.preventDefault();
-    console.log("ENTER");
-    this.setState({
-      [event.target.name]: ["navHover", event.target.name]
-    });
-  }
 
+    var url = this.state[event.target.name][2]
+
+    var navHover = {
+      // margin: '0 3vw',
+      // padding: '0',
+    
+      // color: 'rgba(0, 0, 0, 0)',
+      // fontSize: '3vh',
+      // fontWeight: 'bold',
+      // textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
+    
+      // display: 'flex',
+      // alignItems: 'center',
+      // textAlign: 'center',
+      // justifyContent: 'center',
+    
+      // height: '15vh',
+      // width: '6.5vw',
+    
+      // textDecoration: 'none',
+    
+      // backgroundPosition: 'top center',
+      // backgroundSize: '90%',   
+      background: 'url(' + url + ')',
+    } 
+
+    this.setState(
+      {
+      [event.target.name]: ["navHover", event.target.name, url, navHover]
+    });
+
+  }
+  
   mouseExits(event) {
     event.preventDefault();
-    console.log("EXIT");
+
+    var url = this.state[event.target.name][2]
+
+    var masterLink = {
+      margin: '0 3vw',
+      padding: '0',
+    
+      color: 'white',
+      fontSize: '3vh',
+      fontWeight: 'bold',
+      textShadow: '0px 1.5px 2px rgb(0, 0, 0, .08)',
+    
+      display: 'flex',
+      textAlign: 'center',
+      justifyContent: 'center',
+      alignContent: 'center',
+      alignItems: 'center',
+    
+      height: '15vh',
+      width: '6.5vw',
+    }
+
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name]
+      [event.target.name]: ["masterLink", event.target.name, url, {'':''}]
     });
+
+    console.log(this.state[event.target.name][3])
   }
 
   render() {
@@ -54,6 +105,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Home[0]}
+                style={this.state.Home[3]}
                 name="Home"
                 to={"/"}
                 onMouseEnter={this.mouseHovers}
@@ -65,6 +117,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Projects[0]}
+                style={this.state.Projects[3]}
                 name="Projects"
                 to={"/projects/"}
                 onMouseEnter={this.mouseHovers}
@@ -76,6 +129,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.About[0]}
+                style={this.state.About[3]}
                 name="About"
                 to={"/about"}
                 onMouseEnter={this.mouseHovers}
@@ -87,6 +141,7 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Resume[0]}
+                style={this.state.Resume[3]}
                 name="Resume"
                 to={"/resume"}
                 onMouseEnter={this.mouseHovers}
