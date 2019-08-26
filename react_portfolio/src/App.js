@@ -14,7 +14,7 @@ class App extends Component {
       Home: ["masterLink", "Home", './images/logan.png'],
       Projects: ["masterLink", "Projects", './images/logan.png'],
       About: ["masterLink", "About", './images/logan.png'],
-      Resume: ["masterLink", "Resume", './images/logan.png']
+      Resume: ["masterLink", "Resume", './images/resume.png']
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -26,7 +26,7 @@ class App extends Component {
       Home: ["masterLink", "Home", './images/logan.png'],
       Projects: ["masterLink", "Projects", './images/logan.png'],
       About: ["masterLink", "About", './images/logan.png'],
-      Resume: ["masterLink", "Resume", './images/logan.png'],
+      Resume: ["masterLink", "Resume", './images/resume.png'],
     });
   }
 
