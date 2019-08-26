@@ -6,15 +6,16 @@ import Projects from "./Projects";
 import About from "./About";
 import Resume from "./Resume";
 import { Row, Container, Col } from "reactstrap";
+import Logan from './images/logan.png'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      Home: ["masterLink", "Home", './images/logan.png', {'':''}],
-      Projects: ["masterLink", "Projects", './images/logan.png', {'':''}],
-      About: ["masterLink", "About", './images/logan.png', {'':''}],
-      Resume: ["masterLink", "Resume", './images/logan.png', {'':''}]
+      Home: ["masterLink", "Home", './images/logan.png'],
+      Projects: ["masterLink", "Projects", './images/logan.png'],
+      About: ["masterLink", "About", './images/logan.png'],
+      Resume: ["masterLink", "Resume", './images/logan.png']
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -23,10 +24,10 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      Home: ["masterLink", "Home", './images/logan.png', {'':''}],
-      Projects: ["masterLink", "Projects", './images/logan.png', {'':''}],
-      About: ["masterLink", "About", './images/logan.png', {'':''}],
-      Resume: ["masterLink", "Resume", './images/logan.png', {'':''}]
+      Home: ["masterLink", "Home", './images/logan.png'],
+      Projects: ["masterLink", "Projects", './images/logan.png'],
+      About: ["masterLink", "About", './images/logan.png'],
+      Resume: ["masterLink", "Resume", './images/logan.png'],
     });
   }
 
@@ -34,28 +35,9 @@ class App extends Component {
     event.preventDefault();
 
     var url = this.state[event.target.name][2]
+    console.log(url)
 
     var navHover = {
-      // margin: '0 3vw',
-      // padding: '0',
-    
-      // color: 'rgba(0, 0, 0, 0)',
-      // fontSize: '3vh',
-      // fontWeight: 'bold',
-      // textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
-    
-      // display: 'flex',
-      // alignItems: 'center',
-      // textAlign: 'center',
-      // justifyContent: 'center',
-    
-      // height: '15vh',
-      // width: '6.5vw',
-    
-      // textDecoration: 'none',
-    
-      // backgroundPosition: 'top center',
-      // backgroundSize: '90%',   
       background: 'url(' + url + ')',
     } 
 
@@ -71,30 +53,12 @@ class App extends Component {
 
     var url = this.state[event.target.name][2]
 
-    var masterLink = {
-      margin: '0 3vw',
-      padding: '0',
-    
-      color: 'white',
-      fontSize: '3vh',
-      fontWeight: 'bold',
-      textShadow: '0px 1.5px 2px rgb(0, 0, 0, .08)',
-    
-      display: 'flex',
-      textAlign: 'center',
-      justifyContent: 'center',
-      alignContent: 'center',
-      alignItems: 'center',
-    
-      height: '15vh',
-      width: '6.5vw',
-    }
-
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name, url, {'':''}]
+      [event.target.name]: ["masterLink", event.target.name, url]
     });
 
-    console.log(this.state[event.target.name][3])
+    console.log(this.state[event.target.name])
+  
   }
 
   render() {
@@ -141,7 +105,8 @@ class App extends Component {
             <div className="linkWrapper">
               <Link
                 className={this.state.Resume[0]}
-                style={this.state.Resume[3]}
+                // style={this.state.Resume[3]}
+                style={{backgroundImage: `url(${Logan})`}}
                 name="Resume"
                 to={"/resume"}
                 onMouseEnter={this.mouseHovers}
@@ -191,3 +156,45 @@ class App extends Component {
 }
 
 export default App;
+
+
+     // margin: '0 3vw',
+      // padding: '0',
+    
+      // color: 'rgba(0, 0, 0, 0)',
+      // fontSize: '3vh',
+      // fontWeight: 'bold',
+      // textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
+    
+      // display: 'flex',
+      // alignItems: 'center',
+      // textAlign: 'center',
+      // justifyContent: 'center',
+    
+      // height: '15vh',
+      // width: '6.5vw',
+    
+      // textDecoration: 'none',
+    
+      // backgroundPosition: 'top center',
+      // backgroundSize: '90%',   
+
+
+  // var masterLink = {
+  //   margin: '0 3vw',
+  //   padding: '0',
+  
+  //   color: 'white',
+  //   fontSize: '3vh',
+  //   fontWeight: 'bold',
+  //   textShadow: '0px 1.5px 2px rgb(0, 0, 0, .08)',
+  
+  //   display: 'flex',
+  //   textAlign: 'center',
+  //   justifyContent: 'center',
+  //   alignContent: 'center',
+  //   alignItems: 'center',
+  
+  //   height: '15vh',
+  //   width: '6.5vw',
+  // }
