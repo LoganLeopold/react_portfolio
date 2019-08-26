@@ -43,10 +43,14 @@ div {
   margin: 0 10vw;
   padding: 0;
 
+  position: relative;
+  z-index: 3;
+
   align-items: center;
 }
 
 .linkWrapper {
+  position: relative;
   height: 15vh;
   display: flex;
 
@@ -80,9 +84,9 @@ div {
   align-content: center;
   align-items: center;
 
-  background: url('./images/logan.png') no-repeat fixed;
+  background: rgba(0,0,0,.5);
   background-position: center center;
-  background-size: 90%;
+  background-size: 100%;
  
   height: 15vh;;
   width: auto;
