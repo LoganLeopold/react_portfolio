@@ -33,16 +33,24 @@ class App extends Component {
   mouseHovers(event) {
     event.preventDefault();
 
+    var url = this.state[event.target.name][2]
+
+    var adaptableHover = {
+      background: `${url}`,
+    }
+
     this.setState({
-      [event.target.name]: ["navHover", event.target.name]
+      [event.target.name]: ["navHover", event.target.name, url, adaptableHover]
     });
   }
 
   mouseExits(event) {
     event.preventDefault();
 
+    var url = this.state[event.target.name][2]
+
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name]
+      [event.target.name]: ["masterLink", event.target.name, url]
     });
   }
 
