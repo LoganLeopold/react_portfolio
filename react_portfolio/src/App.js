@@ -130,7 +130,7 @@ class App extends Component {
     this.setState({
       [event.target.name]: ["masterLink", event.target.name, activateHover]
     });
-    
+      
   }
 
   mouseExits(event) {
