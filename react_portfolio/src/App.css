@@ -76,7 +76,7 @@ div {
   height: 15vh;
   width: 6.5vw;
 }
-
+/* 
 .navHover:hover {
   margin: 0 3vw;
   padding: 0;
@@ -96,10 +96,10 @@ div {
 
   text-decoration: none;
 
-  /* background: url('./images/logan.png') no-repeat; */
+  background: url('./images/logan.png') no-repeat;
   background-position: center center;
   background-size: 90%;   
-}
+} */
 
 
 .main {

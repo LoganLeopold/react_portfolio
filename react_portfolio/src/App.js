@@ -50,8 +50,9 @@ class App extends Component {
   mouseHovers(event) {
     event.preventDefault();
 
+   
     var img = this.state[event.target.name][2]
-
+   
     var adaptableHover = {
       background: `url(${img}) no-repeat`,
     }
@@ -69,7 +70,7 @@ class App extends Component {
   mouseExits(event) {
     event.preventDefault();
 
-    var url = this.state[event.target.name][2]
+    var img = this.state[event.target.name][2]
 
     const isFalse = () => {
       return false
@@ -79,7 +80,7 @@ class App extends Component {
     }
 
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name, url, unecessaryStyle, isFalse]
+      [event.target.name]: ["masterLink", event.target.name, img, unecessaryStyle, isFalse]
     });
   }
 
@@ -103,11 +104,12 @@ class App extends Component {
       width: '6.5vw',
     
       textDecoration: 'none',
-    
-      background: `url(${Logan}) no-repeat`,
+     
+      background: 'transparent', 
       backgroundPosition: 'center center',
       backgroundSize: '90%',  
     }
+
     return (
       <Container className="App">
         <Row>
