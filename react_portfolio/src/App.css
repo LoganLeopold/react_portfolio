@@ -96,8 +96,8 @@ div {
 
   text-decoration: none;
 
-  /* background: url('./images/logan.png') no-repeat; */
-  background-position: top center;
+  background: url('./images/logan.png') no-repeat;
+  background-position: center center;
   background-size: 90%;   
 }
 
