@@ -11,12 +11,18 @@ import myResume from './images/resume.png'
 
 class App extends Component {
   constructor() {
+    var initialBackground = {
+      background: 'transparent'
+    };
+    const isFalse = () => {
+      return false
+    };
     super();
     this.state = {
-      Home: ["masterLink", "Home", Logan],
-      Projects: ["masterLink", "Projects", Logan],
-      About: ["masterLink", "About", Logan],
-      Resume: ["masterLink", "Resume", Logan]
+      Home: ["masterLink", "Home", Logan, initialBackground, isFalse],
+      Projects: ["masterLink", "Projects", Logan, initialBackground, isFalse],
+      About: ["masterLink", "About", Logan, initialBackground, isFalse],
+      Resume: ["masterLink", "Resume", Logan, initialBackground, isFalse]
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -24,11 +30,20 @@ class App extends Component {
   }
 
   componentDidMount() {
+
+    var initialBackground = {
+      background: 'transparent'
+    }
+
+    const isFalse = () => {
+      return false
+    }
+
     this.setState({
-      Home: ["masterLink", "Home", Logan],
-      Projects: ["masterLink", "Projects", Logan],
-      About: ["masterLink", "About", Logan],
-      Resume: ["masterLink", "Resume", myResume],
+      Home: ["masterLink", "Home", Logan, initialBackground, isFalse],
+      Projects: ["masterLink", "Projects", Logan, initialBackground, isFalse],
+      About: ["masterLink", "About", Logan, initialBackground, isFalse],
+      Resume: ["masterLink", "Resume", myResume, initialBackground, isFalse],
     });
   }
 
@@ -70,6 +85,29 @@ class App extends Component {
 
   render() {
 
+    var navHover = {
+      margin: '0 3vw',
+      padding: '0',
+    
+      color: 'rgba(0, 0, 0, 0)',
+      fontSize: '3vh',
+      fontWeight: 'bold',
+      textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
+    
+      display: 'flex',
+      alignItems: 'center',
+      textAlign: 'center',
+      justifyContent: 'center',
+    
+      height: '15vh',
+      width: '6.5vw',
+    
+      textDecoration: 'none',
+    
+      background: `url(${Logan}) no-repeat`,
+      backgroundPosition: 'center center',
+      backgroundSize: '90%',  
+    }
     return (
       <Container className="App">
         <Row>
@@ -77,7 +115,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Home[0]}
-                activeStyle={this.state.Home[3]}
+                activeStyle={{...navHover, ...this.state.Home[3]}}
                 isActive={this.state.Home[4]}
                 name="Home"
                 to= {"/"}
@@ -90,7 +128,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Projects[0]}
-                activeStyle={this.state.Projects[3]}
+                activeStyle={{...navHover, ...this.state.Projects[3]}}
                 isActive={this.state.Projects[4]}
                 name="Projects"
                 to={"/projects/"}
@@ -103,9 +141,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.About[0]}
-                activeStyle={{
-                  background: `url('${Logan}') no-repeat`
-                }}
+                activeStyle={{...navHover, ...this.state.About[3]}}
                 isActive={this.state.About[4]}
                 name="About"
                 to={"/about"}
@@ -118,7 +154,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Resume[0]}
-                activeStyle={this.state.Resume[3]}
+                activeStyle={{...navHover, ...this.state.Resume[3]}}
                 isActive={this.state.Resume[4]}
                 name="Resume"
                 to={"/resume"}
