@@ -30,8 +30,7 @@ class App extends Component {
   // isTrue || isFalse controls active React style i.e. will img show or no
   //        If this is mobile I need to disable it so it doesn't mess the vibe up
   //        If this is a desktop I need to enable it so it shows up perfectly
-  // When the component mounts, I can decide if it is a mobile or not
-  //       This will inform the type of :hover pseudo class styling I allow 
+
   componentDidMount() {
 
     const isFalse = () => {
@@ -57,7 +56,13 @@ class App extends Component {
     });
 }
 
-  // conditionalCSS () {
+  // conditionalNavCSS () {
+    
+  // FOR REGULAR DESKTOP
+
+
+
+
   //   var navHover = ''
   //   var mobileHover = ''
   //   if (mobileHover) {
@@ -114,14 +119,16 @@ class App extends Component {
 
     const activateHover = () => {
       if (this.state.mobile) {
+        console.log(this.state.mobile)
         return false;
       } else {
+        console.log(this.state.mobile)
         return true
       }
     }
 
     this.setState({
-      [event.target.name]: ["navHover", event.target.name, activateHover]
+      [event.target.name]: ["masterLink", event.target.name, activateHover]
     });
     
   }
@@ -145,7 +152,7 @@ class App extends Component {
           padding: "0",
 
           color: 'rgb(0,0,0,0)',
-          fontSize: "2.2vw",
+          fontSize: "1.75vw",
           fontWeight: "bold",
           textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
 
