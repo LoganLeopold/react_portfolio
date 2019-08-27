@@ -68,7 +68,7 @@ class App extends Component {
         return disableHover
       }
 
-      if (hasTouchScreen()) {
+      if (!(hasTouchScreen())) {
         var img = this.state[event.target.name][2]
       
         var adaptableHover = {
@@ -110,14 +110,15 @@ class App extends Component {
       padding: '0',
     
       color: 'rgba(0, 0, 0, 0)',
-      fontSize: '3vh',
+      fontSize: '2vw',
       fontWeight: 'bold',
       textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
     
       display: 'flex',
-      alignItems: 'center',
       textAlign: 'center',
       justifyContent: 'center',
+      alignContent: 'center',
+      alignItems: 'center',
     
       height: '15vh',
       width: '5vw',
