@@ -11,18 +11,17 @@ import myResume from './images/resume.png'
 
 class App extends Component {
   constructor() {
-    var initialBackground = {
-      background: 'transparent'
-    };
+  
     const isFalse = () => {
       return false
     };
+
     super();
     this.state = {
-      Home: ["masterLink", "Home", Logan, initialBackground, isFalse],
-      Projects: ["masterLink", "Projects", Logan, initialBackground, isFalse],
-      About: ["masterLink", "About", Logan, initialBackground, isFalse],
-      Resume: ["masterLink", "Resume", Logan, initialBackground, isFalse]
+      Home: ["masterLink", "Home", isFalse],
+      Projects: ["masterLink", "Projects", isFalse],
+      About: ["masterLink", "About", isFalse],
+      Resume: ["masterLink", "Resume", isFalse]
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -31,19 +30,15 @@ class App extends Component {
 
   componentDidMount() {
 
-    var initialBackground = {
-      background: 'transparent'
-    }
-
     const isFalse = () => {
       return false
     }
 
     this.setState({
-      Home: ["masterLink", "Home", Logan, initialBackground, isFalse],
-      Projects: ["masterLink", "Projects", Logan, initialBackground, isFalse],
-      About: ["masterLink", "About", Logan, initialBackground, isFalse],
-      Resume: ["masterLink", "Resume", myResume, initialBackground, isFalse],
+      Home: ["masterLink", "Home", isFalse],
+      Projects: ["masterLink", "Projects", isFalse],
+      About: ["masterLink", "About", isFalse],
+      Resume: ["masterLink", "Resume", isFalse],
     });
   }
 
@@ -69,19 +64,13 @@ class App extends Component {
       }
 
       if (!(hasTouchScreen())) {
-        var img = this.state[event.target.name][2]
-      
-        var adaptableHover = {
-          background: `url(${img}) no-repeat`,
-        }
 
         const isTrue = () => {
           return true
         }
-        console.log(img)
 
         this.setState({
-          [event.target.name]: ["navHover", event.target.name, img, adaptableHover, isTrue]
+          [event.target.name]: ["navHover", event.target.name, isTrue]
         });
       }
   }
@@ -89,17 +78,12 @@ class App extends Component {
   mouseExits(event) {
     event.preventDefault();
 
-    var img = this.state[event.target.name][2]
-
     const isFalse = () => {
       return false
     }
-    const unecessaryStyle = {
-      background: null,
-    }
 
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name, img, unecessaryStyle, isFalse]
+      [event.target.name]: ["masterLink", event.target.name, isFalse]
     });
   }
 
@@ -125,7 +109,6 @@ class App extends Component {
     
       textDecoration: 'none',
      
-      // background: 'transparent', 
       backgroundPosition: 'center center',
       backgroundSize: '90%',  
     }
@@ -137,8 +120,11 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Home[0]}
-                activeStyle={{...navHover, ...this.state.Home[3]}}
-                isActive={this.state.Home[4]}
+                activeStyle={{...navHover}}
+                style={{
+                  background: `url(${Logan}) no-repeat`,
+                }}
+                isActive={this.state.Home[2]}
                 name="Home"
                 to= {"/"}
                 onMouseEnter={this.mouseHovers}
@@ -150,13 +136,12 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Projects[0]}
-                activeStyle={{...navHover, 
-                }}
+                activeStyle={{...navHover}}
                 style={{
                   background: `url(${Logan}) no-repeat`,
+                  backgroundSize: 0,
                 }}
-                  // ...this.state.Projects[3]}}
-                isActive={this.state.Projects[4]}
+                isActive={this.state.Projects[2]}
                 name="Projects"
                 to={"/projects/"}
                 onMouseEnter={this.mouseHovers}
@@ -168,8 +153,11 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.About[0]}
-                activeStyle={{...navHover, ...this.state.About[3]}}
-                isActive={this.state.About[4]}
+                activeStyle={{...navHover}}
+                style={{
+                  background: `url(${Logan}) no-repeat`,
+                }}
+                isActive={this.state.About[2]}
                 name="About"
                 to={"/about"}
                 onMouseEnter={this.mouseHovers}
@@ -181,8 +169,12 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Resume[0]}
-                activeStyle={{...navHover, ...this.state.Resume[3]}}
-                isActive={this.state.Resume[4]}
+                activeStyle={{...navHover}}
+                style={{
+                  background: `url(${myResume}) no-repeat`,
+                  backgroundSize: 0,
+                }}
+                isActive={this.state.Resume[2]}
                 name="Resume"
                 to={"/resume"}
                 onMouseEnter={this.mouseHovers}
