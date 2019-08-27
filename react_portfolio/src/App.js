@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Link, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import Home from "./Home";
 import Projects from "./Projects";
 import About from "./About";
 import Resume from "./Resume";
 import { Row, Container, Col } from "reactstrap";
+import Logan from './images/logan.png'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      Home: ["masterLink", "Home", './images/logan.png'],
-      Projects: ["masterLink", "Projects", './images/logan.png'],
-      About: ["masterLink", "About", './images/logan.png'],
-      Resume: ["masterLink", "Resume", './images/resume.png']
+      Home: ["masterLink", "Home", Logan],
+      Projects: ["masterLink", "Projects", Logan],
+      About: ["masterLink", "About", Logan],
+      Resume: ["masterLink", "Resume", Logan]
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
@@ -23,24 +24,26 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      Home: ["masterLink", "Home", './images/logan.png'],
-      Projects: ["masterLink", "Projects", './images/logan.png'],
-      About: ["masterLink", "About", './images/logan.png'],
-      Resume: ["masterLink", "Resume", './images/resume.png'],
+      Home: ["masterLink", "Home", Logan],
+      Projects: ["masterLink", "Projects", Logan],
+      About: ["masterLink", "About", Logan],
+      Resume: ["masterLink", "Resume", Logan],
     });
   }
 
   mouseHovers(event) {
     event.preventDefault();
 
-    var url = this.state[event.target.name][2]
+    var img = this.state[event.target.name][2]
 
     var adaptableHover = {
-      background: `${url}`,
+      background: `url(${img}) no-repeat`,
     }
 
+    console.log(img)
+
     this.setState({
-      [event.target.name]: ["navHover", event.target.name, url, adaptableHover]
+      [event.target.name]: ["navHover", event.target.name, img, adaptableHover]
     });
   }
 
@@ -60,19 +63,19 @@ class App extends Component {
         <Row>
           <Col className="nav">
             <div className="linkWrapper">
-              <Link
+              <NavLink
                 className={this.state.Home[0]}
                 style={this.state.Home[3]}
                 name="Home"
-                to={"/"}
+                to= {"/"}
                 onMouseEnter={this.mouseHovers}
                 onMouseLeave={this.mouseExits}
               >
                 {this.state.Home[1]}
-              </Link>
+              </NavLink>
             </div>
             <div className="linkWrapper">
-              <Link
+              <NavLink
                 className={this.state.Projects[0]}
                 style={this.state.Projects[3]}
                 name="Projects"
@@ -81,10 +84,10 @@ class App extends Component {
                 onMouseLeave={this.mouseExits}
               >
                 {this.state.Projects[1]}
-              </Link>
+              </NavLink>
             </div>
             <div className="linkWrapper">
-              <Link
+              <NavLink
                 className={this.state.About[0]}
                 style={this.state.About[3]}
                 name="About"
@@ -93,10 +96,10 @@ class App extends Component {
                 onMouseLeave={this.mouseExits}
               >
                 {this.state.About[1]}
-              </Link>
+              </NavLink>
             </div>
             <div className="linkWrapper">
-              <Link
+              <NavLink
                 className={this.state.Resume[0]}
                 style={this.state.Resume[3]}
                 name="Resume"
@@ -105,7 +108,7 @@ class App extends Component {
                 onMouseLeave={this.mouseExits}
               >
                 {this.state.Resume[1]}
-              </Link>
+              </NavLink>
             </div>
           </Col>
           <Col className="main">
