@@ -50,21 +50,40 @@ class App extends Component {
   mouseHovers(event) {
     event.preventDefault();
 
-   
-    var img = this.state[event.target.name][2]
-   
-    var adaptableHover = {
-      background: `url(${img}) no-repeat`,
-    }
+    // Trying to prevent hover behavior on mobile devices. 
+    function hasTouchScreen () {
 
-    const isTrue = () => {
-      return true
-    }
-    console.log(img)
+      console.log('ScreenTest Run')
 
-    this.setState({
-      [event.target.name]: ["navHover", event.target.name, img, adaptableHover, isTrue]
-    });
+      var disableHover = false;
+
+      if ("maxTouchPoints" in navigator) {
+          disableHover = navigator.maxTouchPoints > 0
+        } else if ("msMaxTouchPoints" in navigator) {
+          disableHover = navigator.msMaxTouchPoints > 0
+        } else {
+          disableHover = true;
+        }
+        console.log(disableHover)
+        return disableHover
+      }
+
+      if (hasTouchScreen()) {
+        var img = this.state[event.target.name][2]
+      
+        var adaptableHover = {
+          background: `url(${img}) no-repeat`,
+        }
+
+        const isTrue = () => {
+          return true
+        }
+        console.log(img)
+
+        this.setState({
+          [event.target.name]: ["navHover", event.target.name, img, adaptableHover, isTrue]
+        });
+      }
   }
 
   mouseExits(event) {
@@ -87,7 +106,7 @@ class App extends Component {
   render() {
 
     var navHover = {
-      margin: '0 3vw',
+      margin: '0 4vw',
       padding: '0',
     
       color: 'rgba(0, 0, 0, 0)',
@@ -101,7 +120,7 @@ class App extends Component {
       justifyContent: 'center',
     
       height: '15vh',
-      width: '6.5vw',
+      width: '5vw',
     
       textDecoration: 'none',
      
