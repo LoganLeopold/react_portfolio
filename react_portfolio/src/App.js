@@ -125,7 +125,7 @@ class App extends Component {
     
       textDecoration: 'none',
      
-      background: 'transparent', 
+      // background: 'transparent', 
       backgroundPosition: 'center center',
       backgroundSize: '90%',  
     }
@@ -150,7 +150,12 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Projects[0]}
-                activeStyle={{...navHover, ...this.state.Projects[3]}}
+                activeStyle={{...navHover, 
+                }}
+                style={{
+                  background: `url(${Logan}) no-repeat`,
+                }}
+                  // ...this.state.Projects[3]}}
                 isActive={this.state.Projects[4]}
                 name="Projects"
                 to={"/projects/"}
