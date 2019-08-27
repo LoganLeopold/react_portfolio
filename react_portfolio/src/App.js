@@ -89,29 +89,92 @@ class App extends Component {
 
   render() {
 
-    var navHover = {
-      margin: '0 4vw',
-      padding: '0',
-    
-      color: 'rgba(0, 0, 0, 0)',
-      fontSize: '2vw',
-      fontWeight: 'bold',
-      textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
-    
-      display: 'flex',
-      textAlign: 'center',
-      justifyContent: 'center',
-      alignContent: 'center',
-      alignItems: 'center',
-    
-      height: '15vh',
-      width: '5vw',
-    
-      textDecoration: 'none',
-     
-      backgroundPosition: 'center center',
-      backgroundSize: '90%',  
+    var navHover = {}
+
+    function adaptCSSObject () {
+      var mobileHover = false
+      if ("maxTouchPoints" in navigator) {
+        mobileHover = navigator.maxTouchPoints > 0
+      } else if ("msMaxTouchPoints" in navigator) {
+        mobileHover = navigator.msMaxTouchPoints > 0
+      } else {
+        mobileHover = true
+      }
+
+      if (mobileHover) {
+        navHover = {
+            margin: '0 4vw',
+            padding: '0',
+          
+            color: 'white',
+            fontSize: '2.2vw',
+            fontWeight: 'bold',
+            textShadow: '0px 1.5px 2px rgb(0, 0, 0, .08)',
+            textDecoration: 'none',
+          
+            display: 'flex',
+            textAlign: 'center',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+          
+            height: '15vh',
+            width: '5vw',
+          
+            background: 'transparent',
+          } 
+        } else {
+          navHover = {
+            margin: '0 4vw',
+            padding: '0',
+          
+            color: 'white',
+            fontSize: '2.2vw',
+            fontWeight: 'bold',
+            textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
+          
+            display: 'flex',
+            textAlign: 'center',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+          
+            height: '15vh',
+            width: '5vw',
+          
+            textDecoration: 'none',
+          
+            backgroundPosition: 'center center',
+            backgroundSize: '100%',
+          }
+        }
     }
+
+    adaptCSSObject();
+    
+    // var navHover = {
+    //   margin: '0 4vw',
+    //   padding: '0',
+    
+    //   color: 'white',
+    //   fontSize: '2.2vw',
+    //   fontWeight: 'bold',
+    //   textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
+    
+    //   display: 'flex',
+    //   textAlign: 'center',
+    //   justifyContent: 'center',
+    //   alignContent: 'center',
+    //   alignItems: 'center',
+    
+    //   height: '15vh',
+    //   width: '5vw',
+    
+    //   textDecoration: 'none',
+     
+    //   backgroundPosition: 'center center',
+    //   backgroundSize: '100%',  
+    // }
 
     return (
       <Container className="App">
