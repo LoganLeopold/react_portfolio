@@ -7,6 +7,7 @@ import About from "./About";
 import Resume from "./Resume";
 import { Row, Container, Col } from "reactstrap";
 import Logan from './images/logan.png'
+import myResume from './images/resume.png'
 
 class App extends Component {
   constructor() {
@@ -27,7 +28,7 @@ class App extends Component {
       Home: ["masterLink", "Home", Logan],
       Projects: ["masterLink", "Projects", Logan],
       About: ["masterLink", "About", Logan],
-      Resume: ["masterLink", "Resume", Logan],
+      Resume: ["masterLink", "Resume", myResume],
     });
   }
 
@@ -40,10 +41,13 @@ class App extends Component {
       background: `url(${img}) no-repeat`,
     }
 
+    const isTrue = () => {
+      return true
+    }
     console.log(img)
 
     this.setState({
-      [event.target.name]: ["navHover", event.target.name, img, adaptableHover]
+      [event.target.name]: ["navHover", event.target.name, img, adaptableHover, isTrue]
     });
   }
 
@@ -52,12 +56,20 @@ class App extends Component {
 
     var url = this.state[event.target.name][2]
 
+    const isFalse = () => {
+      return false
+    }
+    const unecessaryStyle = {
+      background: null,
+    }
+
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name, url]
+      [event.target.name]: ["masterLink", event.target.name, url, unecessaryStyle, isFalse]
     });
   }
 
   render() {
+
     return (
       <Container className="App">
         <Row>
@@ -65,7 +77,8 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Home[0]}
-                style={this.state.Home[3]}
+                activeStyle={this.state.Home[3]}
+                isActive={this.state.Home[4]}
                 name="Home"
                 to= {"/"}
                 onMouseEnter={this.mouseHovers}
@@ -77,7 +90,8 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Projects[0]}
-                style={this.state.Projects[3]}
+                activeStyle={this.state.Projects[3]}
+                isActive={this.state.Projects[4]}
                 name="Projects"
                 to={"/projects/"}
                 onMouseEnter={this.mouseHovers}
@@ -89,7 +103,10 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.About[0]}
-                style={this.state.About[3]}
+                activeStyle={{
+                  background: `url('${Logan}') no-repeat`
+                }}
+                isActive={this.state.About[4]}
                 name="About"
                 to={"/about"}
                 onMouseEnter={this.mouseHovers}
@@ -101,7 +118,8 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Resume[0]}
-                style={this.state.Resume[3]}
+                activeStyle={this.state.Resume[3]}
+                isActive={this.state.Resume[4]}
                 name="Resume"
                 to={"/resume"}
                 onMouseEnter={this.mouseHovers}
