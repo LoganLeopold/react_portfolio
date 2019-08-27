@@ -14,86 +14,38 @@ class App extends Component {
     const isFalse = () => {
       return false;
     };
-
     super();
     this.state = {
       Home: ["masterLink", "Home", isFalse],
       Projects: ["masterLink", "Projects", isFalse],
       About: ["masterLink", "About", isFalse],
       Resume: ["masterLink", "Resume", isFalse],
-      CSS: ""
+      mobile: '',
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.mouseHovers = this.mouseHovers.bind(this);
     this.mouseExits = this.mouseExits.bind(this);
   }
 
+  // isTrue || isFalse controls active React style i.e. will img show or no
+  //        If this is mobile I need to disable it so it doesn't mess the vibe up
+  //        If this is a desktop I need to enable it so it shows up perfectly
+  // When the component mounts, I can decide if it is a mobile or not
+  //       This will inform the type of :hover pseudo class styling I allow 
   componentDidMount() {
+
     const isFalse = () => {
       return false;
     };
 
-    const isTrue = () => {
-      return true;
-    }
-
-    var mobileHover = false;
-    var navHover = '';
+    var mobileClient = ''
 
     if ("maxTouchPoints" in navigator) {
-      mobileHover = navigator.maxTouchPoints > 0;
+      mobileClient = navigator.maxTouchPoints > 0;
     } else if ("msMaxTouchPoints" in navigator) {
-      mobileHover = navigator.msMaxTouchPoints > 0;
+      mobileClient = navigator.msMaxTouchPoints > 0;
     } else {
-      mobileHover = true;
-    }
-
-    if (mobileHover) {
-      navHover = {
-        margin: "0 4vw",
-        padding: "0",
-
-        color: "rgba(0,0,0,0)",
-        fontSize: "2.2vw",
-        fontWeight: "bold",
-        textShadow: "0px 1.5px 2px rgb(0, 0, 0, .08)",
-        textDecoration: "none",
-
-        display: "flex",
-        textAlign: "center",
-        justifyContent: "center",
-        alignContent: "center",
-        alignItems: "center",
-
-        height: "15vh",
-        width: "5vw",
-
-        background: "transparent"
-      };
-    } else {
-      navHover = {
-        margin: "0 4vw",
-        padding: "0",
-
-        color: "white",
-        fontSize: "2.2vw",
-        fontWeight: "bold",
-        textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
-
-        display: "flex",
-        textAlign: "center",
-        justifyContent: "center",
-        alignContent: "center",
-        alignItems: "center",
-
-        height: "15vh",
-        width: "5vw",
-
-        textDecoration: "none",
-
-        backgroundPosition: "center center",
-        backgroundSize: "100%"
-      };
+      mobileClient= false;
     }
 
     this.setState({
@@ -101,41 +53,77 @@ class App extends Component {
       Projects: ["masterLink", "Projects", isFalse],
       About: ["masterLink", "About", isFalse],
       Resume: ["masterLink", "Resume", isFalse],
-      CSS: navHover,
+      mobile: mobileClient,
     });
-  }
+}
+
+  // conditionalCSS () {
+  //   var navHover = ''
+  //   var mobileHover = ''
+  //   if (mobileHover) {
+  //     navHover = {
+  //       margin: "0 4vw",
+  //       padding: "0",
+
+  //       color: "rgba(0,0,0,0)",
+  //       fontSize: "2.2vw",
+  //       fontWeight: "bold",
+  //       textShadow: "0px 1.5px 2px rgb(0, 0, 0, .08)",
+  //       textDecoration: "none",
+
+  //       display: "flex",
+  //       textAlign: "center",
+  //       justifyContent: "center",
+  //       alignContent: "center",
+  //       alignItems: "center",
+
+  //       height: "15vh",
+  //       width: "5vw",
+
+  //       background: "transparent"
+  //     };
+  //   } else {
+  //     navHover = {
+  //       margin: "0 4vw",
+  //       padding: "0",
+
+  //       color: "white",
+  //       fontSize: "2.2vw",
+  //       fontWeight: "bold",
+  //       textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
+
+  //       display: "flex",
+  //       textAlign: "center",
+  //       justifyContent: "center",
+  //       alignContent: "center",
+  //       alignItems: "center",
+
+  //       height: "15vh",
+  //       width: "5vw",
+
+  //       textDecoration: "none",
+
+  //       backgroundPosition: "center center",
+  //       backgroundSize: "100%"
+  //     };
+  //   }
+  // }
 
   mouseHovers(event) {
     event.preventDefault();
 
-    // Trying to prevent hover behavior on mobile devices.
-    function hasTouchScreen() {
-      console.log("ScreenTest Run");
-
-      var disableHover = false;
-
-      if ("maxTouchPoints" in navigator) {
-        disableHover = navigator.maxTouchPoints > 0;
-      } else if ("msMaxTouchPoints" in navigator) {
-        disableHover = navigator.msMaxTouchPoints > 0;
+    const activateHover = () => {
+      if (this.state.mobile) {
+        return false;
       } else {
-        disableHover = true;
+        return true
       }
-      console.log(disableHover);
-      return disableHover;
     }
 
-    if (!hasTouchScreen()) {
-      const isTrue = () => {
-        return true;
-      };
-
-      console.log(isTrue)
-
-      this.setState({
-        [event.target.name]: ["navHover", event.target.name, isTrue]
-      });
-    }
+    this.setState({
+      [event.target.name]: ["navHover", event.target.name, activateHover]
+    });
+    
   }
 
   mouseExits(event) {
@@ -152,6 +140,30 @@ class App extends Component {
 
   render() {
 
+        var navHover = {
+          margin: "0 4vw",
+          padding: "0",
+
+          color: 'rgb(0,0,0,0)',
+          fontSize: "2.2vw",
+          fontWeight: "bold",
+          textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
+
+          display: "flex",
+          textAlign: "center",
+          justifyContent: "center",
+          alignContent: "center",
+          alignItems: "center",
+
+          height: "15vh",
+          width: "5vw",
+
+          textDecoration: "none",
+
+          backgroundPosition: "center center",
+          backgroundSize: "100%"
+        }
+
     return (
       <Container className="App">
         <Row>
@@ -159,7 +171,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Home[0]}
-                activeStyle={{ ...this.state.CSS.navHover }}
+                activeStyle={{ ...navHover}}
                 style={{
                   background: `url(${Logan}) no-repeat`,
                   backgroundSize: 0
@@ -176,7 +188,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Projects[0]}
-                activeStyle={{ ...this.state.CSS.navHover }}
+                activeStyle={{ ...navHover}}
                 style={{
                   background: `url(${Logan}) no-repeat`,
                   backgroundSize: 0
@@ -193,7 +205,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.About[0]}
-                activeStyle={{ ...this.state.CSS.navHover }}
+                activeStyle={{ ...navHover}}
                 style={{
                   background: `url(${Logan}) no-repeat`,
                   backgroundSize: 0
@@ -210,7 +222,7 @@ class App extends Component {
             <div className="linkWrapper">
               <NavLink
                 className={this.state.Resume[0]}
-                activeStyle={{ ...this.state.CSS.navHover }}
+                activeStyle={{ ...navHover}}
                 style={{
                   background: `url(${myResume}) no-repeat`,
                   backgroundSize: 0
