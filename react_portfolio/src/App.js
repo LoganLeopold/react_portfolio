@@ -98,17 +98,16 @@ class App extends Component {
 
           display: "flex",
           textAlign: "center",
-          justifyContent: "center",
           alignContent: "center",
           alignItems: "center",
 
-          height: "17vh",
+          height: "20vh",
           width: "9vw",
 
           textDecoration: "none",
 
           backgroundPosition: "center center",
-          backgroundSize: "100%"
+          backgroundSize: "contain"
         }
 
     return (
@@ -119,6 +118,7 @@ class App extends Component {
               <NavLink
                 className={this.state.Home[0]}
                 activeStyle={{ ...navHover}}
+                id={'home'}
                 style={{
                   background: `url(${home}) no-repeat`,
                   backgroundSize: 0
@@ -136,6 +136,7 @@ class App extends Component {
               <NavLink
                 className={this.state.Projects[0]}
                 activeStyle={{ ...navHover}}
+                id={'projects'}
                 style={{
                   background: `url(${ticketTrackr}) no-repeat`,
                   backgroundSize: 0
@@ -153,6 +154,7 @@ class App extends Component {
               <NavLink
                 className={this.state.About[0]}
                 activeStyle={{ ...navHover}}
+                id={'about'}
                 style={{
                   background: `url(${Logan}) no-repeat`,
                   backgroundSize: 0
@@ -170,6 +172,7 @@ class App extends Component {
               <NavLink
                 className={this.state.Resume[0]}
                 activeStyle={{ ...navHover}}
+                id={'resume'}
                 style={{
                   background: `url(${myResume}) no-repeat`,
                   backgroundSize: 0

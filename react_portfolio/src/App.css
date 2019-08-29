@@ -48,7 +48,7 @@ div {
 }
 
 .linkWrapper {
-  height: 17vh;
+  height: 20vh;
   display: flex;
 
   align-items: center;
@@ -71,7 +71,7 @@ div {
   align-content: center;
   align-items: center;
 
-  height: 17vh;
+  height: 20vh;
   width: 9vw;
 }
 
