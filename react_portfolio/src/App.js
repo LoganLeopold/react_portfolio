@@ -118,7 +118,6 @@ class App extends Component {
               <NavLink
                 className={this.state.Home[0]}
                 activeStyle={{ ...navHover}}
-                id={'home'}
                 style={{
                   background: `url(${home}) no-repeat`,
                   backgroundSize: 0
@@ -136,7 +135,6 @@ class App extends Component {
               <NavLink
                 className={this.state.Projects[0]}
                 activeStyle={{ ...navHover}}
-                id={'projects'}
                 style={{
                   background: `url(${ticketTrackr}) no-repeat`,
                   backgroundSize: 0
@@ -154,7 +152,6 @@ class App extends Component {
               <NavLink
                 className={this.state.About[0]}
                 activeStyle={{ ...navHover}}
-                id={'about'}
                 style={{
                   background: `url(${Logan}) no-repeat`,
                   backgroundSize: 0
@@ -172,7 +169,6 @@ class App extends Component {
               <NavLink
                 className={this.state.Resume[0]}
                 activeStyle={{ ...navHover}}
-                id={'resume'}
                 style={{
                   background: `url(${myResume}) no-repeat`,
                   backgroundSize: 0
