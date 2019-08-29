@@ -35,8 +35,8 @@
 }
 
 .projectImg {
-    max-width: 50vmin;
-    max-height: 40vmin;
+    max-width: 45vmin;
+    min-height: 30vmin;
     padding: 20px;
     border: 20px solid white;
     background: #5DA5A8;
@@ -45,10 +45,14 @@
 
 .projectTitle {
     text-align: center;
-    font-size: 4vw
+    font-size: 9vmin;
+
+    /* height: 10vmin; */
 }
 
 .projectTitle:hover {
     text-align: center;
-    font-size: 4.8vw
+    font-size: 9vmin;
+
+    /* height: 10vmin; */
 }

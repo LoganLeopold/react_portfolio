@@ -96,8 +96,8 @@ div {
 }
 
 .main {
-  padding: 4vmin;
-  margin: 3vh 0 5vh 0;
+  padding: 0 4vmin;
+  margin: 0 0 5vh 0;
   min-width: 100%;
   min-height: 100%;
 
