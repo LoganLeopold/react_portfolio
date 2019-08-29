@@ -12,7 +12,7 @@ html::after {
   background: url('./images/coffee.jpg') no-repeat fixed;
   background-size: cover;
   background-position: 50%;
-  opacity: 1;
+  opacity: .9;
   top: 0;
   left: 0;
   right: 0;

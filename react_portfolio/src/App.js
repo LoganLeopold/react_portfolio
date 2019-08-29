@@ -103,7 +103,7 @@ class App extends Component {
           alignItems: "center",
 
           height: "17vh",
-          width: "7vw",
+          width: "9vw",
 
           textDecoration: "none",
 
