@@ -8,6 +8,8 @@ import Resume from "./Resume";
 import { Row, Container, Col } from "reactstrap";
 import Logan from "./images/logan.png";
 import myResume from "./images/resume.png";
+import ticketTrackr from './images/Ticket_Trackr.png'
+import home from './images/home.png'
 
 class App extends Component {
   constructor() {
@@ -26,10 +28,6 @@ class App extends Component {
     this.mouseHovers = this.mouseHovers.bind(this);
     this.mouseExits = this.mouseExits.bind(this);
   }
-
-  // isTrue || isFalse controls active React style i.e. will img show or no
-  //        If this is mobile I need to disable it so it doesn't mess the vibe up
-  //        If this is a desktop I need to enable it so it shows up perfectly
 
   componentDidMount() {
 
@@ -55,64 +53,6 @@ class App extends Component {
       mobile: mobileClient,
     });
 }
-
-  // conditionalNavCSS () {
-    
-  // FOR REGULAR DESKTOP
-
-
-
-
-  //   var navHover = ''
-  //   var mobileHover = ''
-  //   if (mobileHover) {
-  //     navHover = {
-  //       margin: "0 4vw",
-  //       padding: "0",
-
-  //       color: "rgba(0,0,0,0)",
-  //       fontSize: "2.2vw",
-  //       fontWeight: "bold",
-  //       textShadow: "0px 1.5px 2px rgb(0, 0, 0, .08)",
-  //       textDecoration: "none",
-
-  //       display: "flex",
-  //       textAlign: "center",
-  //       justifyContent: "center",
-  //       alignContent: "center",
-  //       alignItems: "center",
-
-  //       height: "15vh",
-  //       width: "5vw",
-
-  //       background: "transparent"
-  //     };
-  //   } else {
-  //     navHover = {
-  //       margin: "0 4vw",
-  //       padding: "0",
-
-  //       color: "white",
-  //       fontSize: "2.2vw",
-  //       fontWeight: "bold",
-  //       textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
-
-  //       display: "flex",
-  //       textAlign: "center",
-  //       justifyContent: "center",
-  //       alignContent: "center",
-  //       alignItems: "center",
-
-  //       height: "15vh",
-  //       width: "5vw",
-
-  //       textDecoration: "none",
-
-  //       backgroundPosition: "center center",
-  //       backgroundSize: "100%"
-  //     };
-  //   }
-  // }
 
   mouseHovers(event) {
     event.preventDefault();
@@ -162,8 +102,8 @@ class App extends Component {
           alignContent: "center",
           alignItems: "center",
 
-          height: "15vh",
-          width: "5vw",
+          height: "17vh",
+          width: "7vw",
 
           textDecoration: "none",
 
@@ -180,7 +120,7 @@ class App extends Component {
                 className={this.state.Home[0]}
                 activeStyle={{ ...navHover}}
                 style={{
-                  background: `url(${Logan}) no-repeat`,
+                  background: `url(${home}) no-repeat`,
                   backgroundSize: 0
                 }}
                 isActive={this.state.Home[2]}
@@ -197,7 +137,7 @@ class App extends Component {
                 className={this.state.Projects[0]}
                 activeStyle={{ ...navHover}}
                 style={{
-                  background: `url(${Logan}) no-repeat`,
+                  background: `url(${ticketTrackr}) no-repeat`,
                   backgroundSize: 0
                 }}
                 isActive={this.state.Projects[2]}
@@ -284,28 +224,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-    // var navHover = {
-    //   margin: '0 4vw',
-    //   padding: '0',
-
-    //   color: 'white',
-    //   fontSize: '2.2vw',
-    //   fontWeight: 'bold',
-    //   textShadow: '0px 1.5px 2px rgb(0, 0, 0, 0)',
-
-    //   display: 'flex',
-    //   textAlign: 'center',
-    //   justifyContent: 'center',
-    //   alignContent: 'center',
-    //   alignItems: 'center',
-
-    //   height: '15vh',
-    //   width: '5vw',
-
-    //   textDecoration: 'none',
-
-    //   backgroundPosition: 'center center',
-    //   backgroundSize: '100%',
-    // }

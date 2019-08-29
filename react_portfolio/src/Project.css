@@ -1,7 +1,6 @@
 .projectCard {
     margin: 2vh 0 0 0;
 
-    /* font-family: 'Playfair Display', serif; */
     font-family: 'DM Serif Text', serif;
 }
 
@@ -46,7 +45,7 @@
 
 .projectTitle {
     text-align: center;
-    font-size: 5vw
+    font-size: 4vw
 }
 
 .projectTitle:hover {
