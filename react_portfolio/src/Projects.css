@@ -10,8 +10,12 @@ h1 {
 }
 
 .projectsCard {
-    width: 100%;
+    min-width: 46vmin;
     height: 100%;
     margin: 0;
     padding: 0;
+
+    align-content: center;
+    justify-content: center;
+    text-align: center;
 }

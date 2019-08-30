@@ -7,8 +7,8 @@
 .projectLink {
     margin: 0;
     padding: 0;
-    min-width: 100%;
-    min-height: 100%;
+    max-height: 0;
+    max-width: 0;
 
     text-decoration: none;
     color: white;
@@ -32,27 +32,29 @@
     align-content: center;
     align-items: center;
     text-align: center;
+
+    padding: 0;
 }
 
 .projectImg {
     max-width: 45vmin;
-    min-height: 30vmin;
+    max-height: 30vmin;
     padding: 20px;
     border: 20px solid white;
-    background: #5DA5A8;
+    background: #E1E2DC;
     box-shadow: 0px 1px 5px rgba(0,0,0,.2)
 }
 
 .projectTitle {
     text-align: center;
-    font-size: 9vmin;
+    font-size: 7vmin;
 
     /* height: 10vmin; */
 }
 
 .projectTitle:hover {
     text-align: center;
-    font-size: 9vmin;
+    font-size: 7vmin;
 
     /* height: 10vmin; */
 }
