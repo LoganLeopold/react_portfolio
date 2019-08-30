@@ -212,7 +212,7 @@ class App extends Component {
                 href="http://www.instagram.com/loganleopold"
                 className="instaLink"
               >
-                Logan Leopold
+                <span className='sizeControl'>Logan Leopold</span>
               </a>
             </h3>
           </Col>
