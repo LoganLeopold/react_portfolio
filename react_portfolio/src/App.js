@@ -31,9 +31,9 @@ class App extends Component {
 
   componentDidMount() {
 
-    const isFalse = () => {
-      return false;
-    };
+    // const isFalse = () => {
+    //   return false;
+    // };
 
     var mobileClient = ''
 
@@ -54,36 +54,36 @@ class App extends Component {
     });
 }
 
-  mouseHovers(event) {
-    event.preventDefault();
+  // mouseHovers(event) {
+  //   event.preventDefault();
 
-    const activateHover = () => {
-      if (this.state.mobile) {
-        console.log(this.state.mobile)
-        return false;
-      } else {
-        console.log(this.state.mobile)
-        return true
-      }
-    }
+  //   const activateHover = () => {
+  //     if (this.state.mobile) {
+  //       console.log(this.state.mobile)
+  //       return false;
+  //     } else {
+  //       console.log(this.state.mobile)
+  //       return true
+  //     }
+  //   }
 
-    this.setState({
-      [event.target.name]: ["masterLink", event.target.name, activateHover]
-    });
+  //   this.setState({
+  //     [event.target.name]: ["masterLink", event.target.name, activateHover]
+  //   });
       
-  }
+  // }
 
-  mouseExits(event) {
-    event.preventDefault();
+  // mouseExits(event) {
+  //   event.preventDefault();
 
-    const isFalse = () => {
-      return false;
-    };
+  //   const isFalse = () => {
+  //     return false;
+  //   };
 
-    this.setState({
-      [event.target.name]: ["masterLink", event.target.name, isFalse]
-    });
-  }
+  //   this.setState({
+  //     [event.target.name]: ["masterLink", event.target.name, isFalse]
+  //   });
+  // }
 
   render() {
 
