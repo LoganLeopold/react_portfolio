@@ -1,16 +1,20 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
-class NavLink extends Component {
+class NavLinkComponent extends Component {
   constructor() {
     const isFalse = () => {
         return false;
       };
     super();
     this.state = {
-      class: "masterLink",
-      name: this.props.name,
-      active: isFalse,
+      class: "",
+      name: "",
+      active: "",
     };
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.mouseHovers = this.mouseHovers.bind(this);
+    this.mouseExits = this.mouseExits.bind(this);
   }
 
   componentDidMount() {
@@ -19,31 +23,29 @@ class NavLink extends Component {
       return false;
     };
 
-//not sure I need this setState and it may just increase CPU load
-    // this.setState({
-    //     class: "masterLink",
-    //     name: this.props.name,
-    //     active: isFalse,
-    // })
+    this.setState({
+        class: "masterLink",
+        name: this.props.linkname,
+        active: isFalse,
+    })
 
   }
 
   mouseHovers(event) {
     event.preventDefault();
 
-    // const activateHover = () => {
-    //   if (this.props____.mobile) {
-    //     console.log(this.props.______.mobile);
-    //     return false;
-    //   } else {
-    //     console.log(this.props._______.mobile);
-    //     return true;
-    //   }
-    // };
+    const activateHover = () => {
+      if (this.props.mobile) {
+        console.log(this.props.mobile);
+        return false;
+      } else {
+        console.log(this.props.mobile);
+        return true;
+      }
+    };
 
     this.setState({
         class: "masterLink",
-        name: this.props.name,
         active: activateHover,
     });
   }
@@ -51,12 +53,9 @@ class NavLink extends Component {
   mouseExits(event) {
     event.preventDefault();
 
-    const isFalse = () => {
-      return false;
-    };
-
     this.setState({
-      [event.target.name]: ["masterLink", event.target.name, isFalse]
+      class: "masterLink",
+      active: false,
     });
   }
 
@@ -92,20 +91,20 @@ class NavLink extends Component {
                     className={this.state.class}
                     activeStyle={{ ...navHover}}
                     style={{
-                    background: `url(${this.props._____}) no-repeat`,
+                    background: `url(${this.props.image}) no-repeat`,
                     backgroundSize: 0
                     }}
                     isActive={this.state.active}
-                    name={this.props.name}
-                    to={`/${this.props.name}`}
+                    name={this.state.name}
+                    to={this.props.to}
                     onMouseEnter={this.mouseHovers}
                     onMouseLeave={this.mouseExits}
                 >
-                    {this.props.name}
+                    {this.state.name}
                 </NavLink>
         </div>
       )
    }
 }
 
-export default NavLink;
+export default NavLinkComponent;

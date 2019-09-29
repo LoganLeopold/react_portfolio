@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { NavLink, Route } from "react-router-dom";
+import NavLinkComponent from "./NavLinkComponent"
 import Home from "./Home";
 import Projects from "./Projects";
 import About from "./About";
@@ -18,22 +19,12 @@ class App extends Component {
     };
     super();
     this.state = {
-      Home: ["masterLink", "Home", isFalse],
-      Projects: ["masterLink", "Projects", isFalse],
-      About: ["masterLink", "About", isFalse],
-      Resume: ["masterLink", "Resume", isFalse],
       mobile: '',
     };
     this.componentDidMount = this.componentDidMount.bind(this);
-    this.mouseHovers = this.mouseHovers.bind(this);
-    this.mouseExits = this.mouseExits.bind(this);
   }
 
   componentDidMount() {
-
-    // const isFalse = () => {
-    //   return false;
-    // };
 
     var mobileClient = ''
 
@@ -46,142 +37,20 @@ class App extends Component {
     }
 
     this.setState({
-      Home: ["masterLink", "Home", isFalse],
-      Projects: ["masterLink", "Projects", isFalse],
-      About: ["masterLink", "About", isFalse],
-      Resume: ["masterLink", "Resume", isFalse],
       mobile: mobileClient,
     });
 }
 
-  // mouseHovers(event) {
-  //   event.preventDefault();
-
-  //   const activateHover = () => {
-  //     if (this.state.mobile) {
-  //       console.log(this.state.mobile)
-  //       return false;
-  //     } else {
-  //       console.log(this.state.mobile)
-  //       return true
-  //     }
-  //   }
-
-  //   this.setState({
-  //     [event.target.name]: ["masterLink", event.target.name, activateHover]
-  //   });
-      
-  // }
-
-  // mouseExits(event) {
-  //   event.preventDefault();
-
-  //   const isFalse = () => {
-  //     return false;
-  //   };
-
-  //   this.setState({
-  //     [event.target.name]: ["masterLink", event.target.name, isFalse]
-  //   });
-  // }
-
   render() {
-
-        var navHover = {
-          margin: "0 4vw",
-          padding: "0",
-
-          color: 'rgb(0,0,0,0)',
-          fontSize: "1.75vw",
-          fontWeight: "bold",
-          textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
-
-          display: "flex",
-          textAlign: "center",
-          alignContent: "center",
-          alignItems: "center",
-
-          height: "20vh",
-          width: "9vw",
-
-          textDecoration: "none",
-
-          backgroundPosition: "center center",
-          backgroundSize: "contain"
-        }
 
     return (
       <Container className="App">
         <Row>
           <Col className="nav">
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.Home[0]}
-                activeStyle={{ ...navHover}}
-                style={{
-                  background: `url(${home}) no-repeat`,
-                  backgroundSize: 0
-                }}
-                isActive={this.state.Home[2]}
-                name="Home"
-                to={"/"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.Home[1]}
-              </NavLink>
-            </div>
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.Projects[0]}
-                activeStyle={{ ...navHover}}
-                style={{
-                  background: `url(${ticketTrackr}) no-repeat`,
-                  backgroundSize: 0
-                }}
-                isActive={this.state.Projects[2]}
-                name="Projects"
-                to={"/projects/"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.Projects[1]}
-              </NavLink>
-            </div>
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.About[0]}
-                activeStyle={{ ...navHover}}
-                style={{
-                  background: `url(${Logan}) no-repeat`,
-                  backgroundSize: 0
-                }}
-                isActive={this.state.About[2]}
-                name="About"
-                to={"/about"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.About[1]}
-              </NavLink>
-            </div>
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.Resume[0]}
-                activeStyle={{ ...navHover}}
-                style={{
-                  background: `url(${myResume}) no-repeat`,
-                  backgroundSize: 0
-                }}
-                isActive={this.state.Resume[2]}
-                name="Resume"
-                to={"/resume"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.Resume[1]}
-              </NavLink>
-            </div>
+            <NavLinkComponent image={home} linkname="Home" to={"/"} {...this.state} {...this.props} />
+            <NavLinkComponent image={ticketTrackr} linkname='Projects' to={'/projects/'} {...this.state} {...this.props} />
+            <NavLinkComponent image={Logan} linkname="About" to={"/about"} {...this.state} {...this.props} />
+           <NavLinkComponent image={myResume} linkname="Resume" to={"/resume"} {...this.state} {...this.props} />
           </Col>
           <Col className="main">
             <Route
