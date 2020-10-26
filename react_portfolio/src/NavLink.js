@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./NavLink.css";
 
 class NavLink extends Component {
   constructor() {
@@ -19,27 +20,10 @@ class NavLink extends Component {
       return false;
     };
 
-//not sure I need this setState and it may just increase CPU load
-    // this.setState({
-    //     class: "masterLink",
-    //     name: this.props.name,
-    //     active: isFalse,
-    // })
-
   }
 
   mouseHovers(event) {
     event.preventDefault();
-
-    // const activateHover = () => {
-    //   if (this.props____.mobile) {
-    //     console.log(this.props.______.mobile);
-    //     return false;
-    //   } else {
-    //     console.log(this.props._______.mobile);
-    //     return true;
-    //   }
-    // };
 
     this.setState({
         class: "masterLink",
@@ -63,23 +47,23 @@ class NavLink extends Component {
   render() {
 
     var navHover = {
-        margin: "0 4vw",
-        padding: "0",
+        // margin: "0 4vw",
+        // padding: "0",
 
         color: 'rgb(0,0,0,0)',
-        fontSize: "1.75vw",
-        fontWeight: "bold",
+        // fontSize: "1.75vw",
+        // fontWeight: "bold",
         textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
 
-        display: "flex",
-        textAlign: "center",
-        alignContent: "center",
-        alignItems: "center",
+        // display: "flex",
+        // textAlign: "center",
+        // alignContent: "center",
+        // alignItems: "center",
 
-        height: "20vh",
-        width: "9vw",
+        // height: "20vh",
+        // width: "9vw",
 
-        textDecoration: "none",
+        // textDecoration: "none",
 
         backgroundPosition: "center center",
         backgroundSize: "contain"
@@ -88,24 +72,24 @@ class NavLink extends Component {
       return (
       
         <div className="linkWrapper">
-                <NavLink
-                    className={this.state.class}
-                    activeStyle={{ ...navHover}}
-                    style={{
-                    background: `url(${this.props._____}) no-repeat`,
-                    backgroundSize: 0
-                    }}
-                    isActive={this.state.active}
-                    name={this.props.name}
-                    to={`/${this.props.name}`}
-                    onMouseEnter={this.mouseHovers}
-                    onMouseLeave={this.mouseExits}
-                >
-                    {this.props.name}
-                </NavLink>
+          <NavLink
+              className={this.state.class}
+              activeStyle={{ ...navHover}}
+              style={{
+                background: `url(${this.props._____}) no-repeat`,
+                backgroundSize: 0
+              }}
+              isActive={this.state.active}
+              name={this.props.name}
+              to={`/${this.props.name}`}
+              onMouseEnter={this.mouseHovers}
+              onMouseLeave={this.mouseExits}
+          >
+              {this.props.name}
+          </NavLink>
         </div>
       )
    }
 }
 
-export default NavLink;
+// export default NavLink;x

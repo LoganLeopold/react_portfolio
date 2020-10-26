@@ -4,51 +4,25 @@
 }
 
 .nav {
-  height: 50vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-  margin: 0 10vw;
-  padding: 0;
+  font-family: 'Rokkitt', serif;
+  position: relative;
+  margin-top: 15vh;
 }
 
-.masterLink {
-  margin: 0 4vw;
-  padding: 0;
-
+.linkWrapper, .masterLink {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20vw;
   color: white;
   font-weight: bold;
   text-shadow: 0px 1.5px 2px rgb(0, 0, 0, 0.08);
-
+  font-size: 25px;
   text-align: center;
-
-  height: "20vh";
-  width: "9vw";
-}
-
-.masterLink.active {
-  margin: "0 4vw";
-  padding: "0";
-
-  font-size: 20px;
-  font-weight: "bold";
-  text-shadow: 0px 1.5px 2px rgb(0, 0, 0, 0.08);
-
-  text-decoration: "none";
-
-  background-position: "center center";
-  background-size: "contain";
-}
-
-.photo {
-  justify-content: right;
-  align-content: right;
-  text-align: right;
-  align-items: flex-end;
-
-  margin: 10vmin 0 0 0;
 }

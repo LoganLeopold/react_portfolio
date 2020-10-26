@@ -13,6 +13,7 @@ class App extends Component {
 
     return (
       <div className="App">
+          <h1>Logan Leopold</h1>
           <div className="main">
             <Route
               path="/"

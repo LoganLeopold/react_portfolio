@@ -81,99 +81,83 @@ class Home extends Component {
   render() {
 
     var navHover = {
-      margin: "0 4vw",
-      padding: "0",
-
       color: "rgb(0,0,0,0)",
-      fontSize: "1.75vw",
-      fontWeight: "bold",
       textShadow: "0px 1.5px 2px rgb(0, 0, 0, 0)",
-
-      display: "flex",
-      textAlign: "center",
-      alignContent: "center",
-      alignItems: "center",
-
-      height: "20vh",
-      width: "9vw",
-
-      textDecoration: "none",
-
       backgroundPosition: "center center",
       backgroundSize: "contain",
-    };
-    
+    };  
+
     return (
-          <div className="nav">
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.Home[0]}
-                activeStyle={{ ...navHover }}
-                style={{
-                  background: `url(${home}) no-repeat`,
-                  backgroundSize: 0,
-                }}
-                isActive={this.state.Home[2]}
-                name="Home"
-                to={"/"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.Home[1]}
-              </NavLink>
-            </div>
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.Projects[0]}
-                activeStyle={{ ...navHover }}
-                style={{
-                  background: `url(${ticketTrackr}) no-repeat`,
-                  backgroundSize: 0,
-                }}
-                isActive={this.state.Projects[2]}
-                name="Projects"
-                to={"/projects/"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.Projects[1]}
-              </NavLink>
-            </div>
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.About[0]}
-                activeStyle={{ ...navHover }}
-                style={{
-                  background: `url(${Logan}) no-repeat`,
-                  backgroundSize: 0,
-                }}
-                isActive={this.state.About[2]}
-                name="About"
-                to={"/about"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.About[1]}
-              </NavLink>
-            </div>
-            <div className="linkWrapper">
-              <NavLink
-                className={this.state.Resume[0]}
-                activeStyle={{ ...navHover }}
-                style={{
-                  background: `url(${myResume}) no-repeat`,
-                  backgroundSize: 0,
-                }}
-                isActive={this.state.Resume[2]}
-                name="Resume"
-                to={"/resume"}
-                onMouseEnter={this.mouseHovers}
-                onMouseLeave={this.mouseExits}
-              >
-                {this.state.Resume[1]}
-              </NavLink>
-            </div>
-          </div>
+      <div className="nav">
+        <div className="linkWrapper">
+          <NavLink
+            className={this.state.Home[0]}
+            style={{
+              background: `url(${home}) no-repeat`,
+              backgroundSize: 0,
+            }}
+            activeStyle={navHover}
+            isActive={this.state.Home[2]}
+            name="Home"
+            to={"/"}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}
+          >
+            {this.state.Home[1]}
+          </NavLink>
+        </div>
+        <div className="linkWrapper">
+          <NavLink
+            className={this.state.Projects[0]}
+            style={{
+              background: `url(${ticketTrackr}) no-repeat`,
+              backgroundSize: 0,
+            }}
+            activeStyle={navHover}
+            isActive={this.state.Projects[2]}
+            name="Projects"
+            to={"/projects/"}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}
+          >
+            {this.state.Projects[1]}
+          </NavLink>
+        </div>
+        <div className="linkWrapper">
+          <NavLink
+            className={this.state.About[0]}
+            style={{
+              background: `url(${Logan}) no-repeat`,
+              backgroundSize: 0,
+            }}
+            activeStyle={navHover}
+            isActive={this.state.About[2]}
+            name="About"
+            to={"/about"}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}
+          >
+            {this.state.About[1]}
+          </NavLink>
+        </div>
+        <div className="linkWrapper">
+          <NavLink
+            className={this.state.Resume[0]}
+            style={{
+              background: `url(${myResume}) no-repeat`,
+              backgroundSize: 0,
+            }}
+            activeStyle={navHover}
+            isActive={this.state.Resume[2]}
+            name="Resume"
+            to={"/resume"}
+            onMouseEnter={this.mouseHovers}
+            onMouseLeave={this.mouseExits}
+          >
+            {this.state.Resume[1]}
+          </NavLink>
+        </div>
+      </div>
     );
   }
 }
